@@ -9,8 +9,8 @@
     "email": "ybfan@pku.edu.cn",
     "tagline": "Multimodal intelligence for understanding, predicting, and acting in complex spaces.",
     "mission": "I develop multimodal spatial intelligence that integrates visual perception, 3D geometry, language, and dynamics. My research focuses on efficient world models and grounded decision-making, with intelligent mining as a defining real-world frontier.",
-    "description": "Academic homepage of Yingbo Fan, a researcher in multimodal spatial intelligence, world models, embodied AI, and intelligent mining at Peking University.",
-    "keywords": ["Multimodal Spatial Intelligence", "World Models", "Embodied AI", "Intelligent Mining"],
+    "description": "Academic homepage of Yingbo Fan, a researcher in multimodal spatial intelligence, world models, and intelligent mining at Peking University.",
+    "keywords": ["Multimodal Spatial Intelligence", "World Models", "Intelligent Mining"],
     "profiles": [
       {
         "label": "Google Scholar",
@@ -70,8 +70,8 @@
     {
       "index": "03",
       "verb": "Act",
-      "title": "Embodied and Industrial Intelligence",
-      "description": "Translate spatial understanding and predictive models into grounded action for embodied agents and intelligent mining systems."
+      "title": "Intelligent Mining and Embodied Systems",
+      "description": "Translate spatial understanding and predictive models into reliable decisions for intelligent mining and other embodied systems."
     }
   ],
   "featured": [
