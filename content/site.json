@@ -1,0 +1,290 @@
+{
+  "site": {
+    "name": "Yingbo Fan",
+    "nameZh": "樊迎博",
+    "title": "Postdoctoral Researcher",
+    "institution": "Peking University",
+    "affiliation": "School of Earth and Space Sciences, Peking University",
+    "location": "Beijing, China",
+    "email": "ybfan@pku.edu.cn",
+    "tagline": "From panoramic perception to embodied action.",
+    "mission": "I build spatially grounded intelligent systems that perceive panoramic worlds, construct consistent 3D representations, model dynamics efficiently, and act through vision-language-action.",
+    "description": "Academic homepage of Yingbo Fan, a computer vision and embodied intelligence researcher at Peking University.",
+    "profiles": [
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yingbo+Fan+Peking+University",
+        "note": "Author search"
+      },
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0009-0009-9276-9549"
+      },
+      {
+        "label": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/search?q=Yingbo%20Fan%20Peking%20University&sort=relevance",
+        "note": "Author search"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:ybfan@pku.edu.cn"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "8",
+      "label": "SCI papers",
+      "detail": "9 publications in total"
+    },
+    {
+      "value": "5",
+      "label": "First-author SCI papers",
+      "detail": "Computer vision and AI"
+    },
+    {
+      "value": "16",
+      "label": "Granted patents",
+      "detail": "China and overseas jurisdictions"
+    },
+    {
+      "value": "5",
+      "label": "Major research projects",
+      "detail": "National and ministerial programs"
+    }
+  ],
+  "researchArc": [
+    {
+      "index": "01",
+      "verb": "See",
+      "title": "Panoramic and 3D Perception",
+      "description": "Build geometrically consistent representations from panoramic, multi-view, and spatial observations."
+    },
+    {
+      "index": "02",
+      "verb": "Model",
+      "title": "Efficient World Models",
+      "description": "Predict future states and support planning while keeping inference cost under control."
+    },
+    {
+      "index": "03",
+      "verb": "Act",
+      "title": "Embodied Intelligence and VLA",
+      "description": "Ground vision, language, and action in spatial understanding for capable embodied agents."
+    }
+  ],
+  "featured": [
+    {
+      "slug": "carve-vla",
+      "category": "Embodied Intelligence",
+      "title": "CARVE-VLA",
+      "status": "Research in progress",
+      "image": "/assets/carve-vla.svg",
+      "alt": "Concept illustration for CARVE-VLA showing visual observations, language, an embodied agent, and action trajectories.",
+      "description": "A vision-language-action research direction centered on spatially grounded perception, reasoning, and action for embodied agents.",
+      "links": []
+    },
+    {
+      "slug": "one-sphere-many-charts",
+      "category": "Panoramic Geometry",
+      "title": "One Sphere, Many Charts",
+      "subtitle": "Group-Consistent Panoramic Depth from Frozen Foundation Models",
+      "status": "Research in progress",
+      "image": "/assets/one-sphere.svg",
+      "alt": "Concept illustration of a sphere decomposed into multiple charts for panoramic depth estimation.",
+      "description": "Panoramic depth estimation that adapts frozen foundation models to spherical geometry through chart-based representations and group consistency.",
+      "links": []
+    },
+    {
+      "slug": "lightweight-world-models",
+      "category": "Efficient Intelligence",
+      "title": "Lightweight World Models",
+      "status": "Exploratory research direction",
+      "image": "/assets/world-models.svg",
+      "alt": "Concept illustration of compact latent states supporting prediction and planning.",
+      "description": "A first-principles exploration of world-model design that retains planning capability while reducing the cost of inference.",
+      "links": []
+    }
+  ],
+  "publications": [
+    {
+      "year": 2025,
+      "title": "Adaptive Multi-Channel Dehazing for Enhanced Visibility in Underground Coal Mine Images",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Boxiang Yang, Yinglu Yang",
+      "venue": "PLOS ONE, 20(11): e0334251",
+      "doi": "10.1371/journal.pone.0334251",
+      "url": "https://doi.org/10.1371/journal.pone.0334251",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/dehazing.svg",
+      "tags": ["Image Enhancement", "Industrial Vision", "Efficient Vision"],
+      "summary": "An adaptive multi-channel method for robust and efficient image dehazing in complex underground environments."
+    },
+    {
+      "year": 2025,
+      "title": "高级智能化煤矿建设发展思考",
+      "authors": "Shanjun Mao, Huazhou Chen, Haibin Liu, et al., Yingbo Fan, et al.",
+      "venue": "中国煤炭",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["Intelligent Mining"]
+    },
+    {
+      "year": 2024,
+      "title": "CM-YOLOv8: Lightweight YOLO for Coal Mine Fully Mechanized Mining Face",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Zheng Wu, Jitong Kang",
+      "venue": "Sensors, 24(6): 1866",
+      "doi": "10.3390/s24061866",
+      "url": "https://doi.org/10.3390/s24061866",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/cm-yolov8.svg",
+      "tags": ["Object Detection", "Model Compression", "Industrial Vision"],
+      "summary": "A lightweight detection framework combining adaptive anchor design and structured pruning for resource-constrained mining environments."
+    },
+    {
+      "year": 2024,
+      "title": "Rectification for Stitched Images with Deformable Meshes and Residual Networks",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Zheng Wu, Jitong Kang, Ben Li",
+      "venue": "Applied Sciences, 14(7): 2821",
+      "doi": "10.3390/app14072821",
+      "url": "https://doi.org/10.3390/app14072821",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/rectification.svg",
+      "tags": ["Image Stitching", "Geometric Rectification", "Deep Learning"],
+      "summary": "A deformable-mesh and residual-network approach for rectifying irregular stitched images while preserving image content."
+    },
+    {
+      "year": 2024,
+      "title": "Experimental Study on Drilling Signal Characteristics of PDC Drill Bit in Media of Different Strengths and Identification of Weak Media",
+      "authors": "Zheng Wu, Yingbo Fan, Huazhou Chen",
+      "venue": "Sensors, 24(23): 7852",
+      "doi": "10.3390/s24237852",
+      "url": "https://doi.org/10.3390/s24237852",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["Industrial Sensing"]
+    },
+    {
+      "year": 2024,
+      "title": "A Coal Mine Tunnel Deformation Detection Method Using Point Cloud Data",
+      "authors": "Jitong Kang, Mei Li, Shanjun Mao, Yingbo Fan, Zheng Wu, Ben Li",
+      "venue": "Sensors, 24(7): 2299",
+      "doi": "10.3390/s24072299",
+      "url": "https://doi.org/10.3390/s24072299",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["Point Clouds", "3D Scene Understanding"]
+    },
+    {
+      "year": 2024,
+      "title": "A Point Cloud Segmentation Method for Dim and Cluttered Underground Tunnel Scenes Based on the Segment Anything Model",
+      "authors": "Jitong Kang, Ning Chen, Mei Li, Shanjun Mao, Haoyuan Zhang, Yingbo Fan, Hui Liu",
+      "venue": "Remote Sensing, 16(1): 97",
+      "doi": "10.3390/rs16010097",
+      "url": "https://doi.org/10.3390/rs16010097",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["Point Clouds", "Segmentation", "Foundation Models"]
+    },
+    {
+      "year": 2023,
+      "title": "LMFD: Lightweight Multi-Feature Descriptors for Image Stitching",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Jitong Kang, Ben Li",
+      "venue": "Scientific Reports, 13: 21162",
+      "doi": "10.1038/s41598-023-48432-7",
+      "url": "https://doi.org/10.1038/s41598-023-48432-7",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/lmfd.svg",
+      "tags": ["Local Features", "Image Stitching", "Efficient Vision"],
+      "summary": "Binary multi-feature descriptors designed for robust image matching under rotation, noise, and hardware constraints."
+    },
+    {
+      "year": 2021,
+      "title": "HFPQ: Deep Neural Network Compression by Hardware-Friendly Pruning-Quantization",
+      "authors": "Yingbo Fan, Wei Pang, Shengli Lu",
+      "venue": "Applied Intelligence, 51(10): 7016–7028",
+      "doi": "10.1007/s10489-020-01968-x",
+      "url": "https://doi.org/10.1007/s10489-020-01968-x",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/hfpq.svg",
+      "tags": ["Model Compression", "Pruning", "Quantization"],
+      "summary": "A hardware-friendly framework that combines structured pruning and power-of-two quantization for efficient neural networks."
+    }
+  ],
+  "projects": [
+    {
+      "period": "2025–2030",
+      "title": "Transparent Mine Geological Foundation Model and Cloud Platform",
+      "program": "National Science and Technology Major Project",
+      "role": "Research contributor",
+      "description": "Contributing to intelligent processing for heterogeneous video streams, 3D spatial data, scene reconstruction, and multimodal fusion."
+    },
+    {
+      "period": "2024–2026",
+      "title": "Vector-Space Video Streaming for Intelligent Longwall Mining Faces",
+      "program": "Science and Technology Support Project",
+      "role": "Key research contributor",
+      "description": "Research on panoramic video streams, spatial mapping, and real-time visual interaction for an intelligent longwall mining platform."
+    },
+    {
+      "period": "2023–2026",
+      "title": "Digital-Twin Mining Area and Decision System for Deep-Sea Polymetallic Nodules",
+      "program": "National Key Research and Development Program",
+      "role": "Research contributor",
+      "description": "Contributing to underwater scene reconstruction and digital-twin technologies for deep-sea mining environments."
+    },
+    {
+      "period": "2022–2025",
+      "title": "Digital-Twin Technologies for Coal-Mine Disaster Monitoring and Decision-Making",
+      "program": "National Key Research and Development Program",
+      "role": "Research contributor",
+      "description": "Research on depth enhancement and local 3D reconstruction for improving digital-twin scene fidelity."
+    },
+    {
+      "period": "2020–2023",
+      "title": "High-Precision Perception and Digital-Twin Systems for Large Mine Roadway Robots",
+      "program": "National Key Research and Development Program",
+      "role": "Research contributor",
+      "description": "Research on multi-source sensing, spatial perception, and 3D digital-twin construction for intelligent roadway systems."
+    }
+  ],
+  "patents": [
+    {"year": 2025, "title": "基于视觉信息对处理成果的多维码智能解析方法和系统", "country": "China", "number": "ZL 2024 1 1409062.8"},
+    {"year": 2025, "title": "一种地理空间到高精度数字空间的设备管控系统", "country": "China", "number": "ZL 2023 1 1396230.X"},
+    {"year": 2024, "title": "一种通用人工时空智能大模型的构建方法", "country": "China", "number": "ZL 2024 1 1433513.1"},
+    {"year": 2024, "title": "基于可变形网格和宽度残差网络的图像矩形化方法和装置", "country": "China", "number": "ZL 2024 1 0222860.3"},
+    {"year": 2024, "title": "受限空间内矢量空间搭建与图像融合建模的方法和装置", "country": "China", "number": "ZL 2023 1 1577506.4"},
+    {"year": 2024, "title": "一种基于时空信息对的人工智能系统", "country": "China", "number": "ZL 2024 1 0643385.7"},
+    {"year": 2024, "title": "一种面向受限空间的多视角几何场景建立方法和装置", "country": "China", "number": "ZL 2023 1 1058030.3"},
+    {"year": 2023, "title": "一种真实地理空间场景实时构建方法和实时构建装置", "country": "China", "number": "ZL 2022 1 0499659.0"},
+    {"year": 2024, "title": "基于多重特征描述符的图像特征匹配方法和装置", "country": "China", "number": "ZL 2023 1 0841374.5"},
+    {"year": 2023, "title": "Method and Apparatus for Constructing Real Geographic Space Scene in Real Time", "country": "United States", "number": "US 11,836,878 B2"},
+    {"year": 2024, "title": "Method and Apparatus for Constructing Real Geographic Space Scene in Real Time", "country": "Russia", "number": "RU 2815084"},
+    {"year": 2024, "title": "Method and Apparatus for Constructing a Scene in Real Geographic Space in Real Time", "country": "Canada", "number": "CA 3199062"},
+    {"year": 2023, "title": "Method and Apparatus for Constructing Real-Geographic-Space Scene in Real Time", "country": "Australia", "number": "AU 2023202859"},
+    {"year": 2025, "title": "Artificial Intelligence System Based on Spatio-Temporal Information Pairs", "country": "Russia", "number": "RU 2842579"},
+    {"year": 2023, "title": "一种基于Adaboost算法的人脸检测方法", "country": "China", "number": "ZL 2019 1 1052238.6"},
+    {"year": 2021, "title": "一种基于幂指数量化的深度神经网络硬件加速器", "country": "China", "number": "ZL 2019 1 1436775.1"}
+  ],
+  "education": [
+    {"period": "2021–2025", "degree": "Ph.D. in Cartography and Geographic Information Systems", "institution": "Peking University"},
+    {"period": "2018–2021", "degree": "M.S. in Computer Science and Technology", "institution": "Southeast University"},
+    {"period": "2014–2018", "degree": "B.E. in Electrical Engineering and Automation", "institution": "University of Electronic Science and Technology of China"}
+  ],
+  "experience": [
+    {"period": "2026–Present", "role": "Postdoctoral Researcher", "institution": "Peking University"},
+    {"period": "2025–2026", "role": "Postdoctoral Research Preparation and Project Development", "institution": "Peking University"},
+    {"period": "2016", "role": "Visiting Researcher", "institution": "The Hong Kong Polytechnic University"}
+  ],
+  "awards": [
+    {"year": "2024", "title": "Liao Kaiyuan Scholarship, Peking University"},
+    {"year": "2024", "title": "Academic Excellence Award, Peking University"},
+    {"year": "2023", "title": "Social Practice Excellence Award, Peking University"},
+    {"year": "", "title": "Outstanding Young Paper Award, National Virtual Geographic Environment Conference"},
+    {"year": "2021", "title": "Outstanding Presentation Award, International Graduate Workshop on GeoInformatics"}
+  ]
+}

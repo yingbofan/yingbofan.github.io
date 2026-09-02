@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Adaptive dehazing concept visual</title>
+  <desc id="desc">A divided scene illustrates hazy low-contrast imagery becoming clearer after adaptive processing.</desc>
+  <rect width="800" height="500" fill="#eef2f4"/>
+  <rect x="60" y="72" width="680" height="356" fill="#9da9af"/>
+  <path d="M60 315l170-124 127 82 125-122 258 164v113H60z" fill="#7e8b91"/>
+  <rect x="85" y="245" width="105" height="124" fill="#737f84"/>
+  <rect x="115" y="270" width="43" height="99" fill="#aeb7bb"/>
+  <rect x="60" y="72" width="340" height="356" fill="#d8dddf" opacity="0.72"/>
+  <path d="M400 72v356" stroke="#ffffff" stroke-width="5"/>
+  <path d="M438 315l170-124 127 82" fill="none" stroke="#1f5b83" stroke-width="7"/>
+  <circle cx="654" cy="124" r="34" fill="#d9a441"/>
+  <text x="105" y="115" font-family="Arial, sans-serif" font-size="20" fill="#66717a">HAZY</text>
+  <text x="438" y="115" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">ADAPTIVE RESTORATION</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Spatial intelligence in complex environments</title>
+  <desc id="desc">Panoramic cameras, vector geometry, and a digital scene are combined in an industrial environment.</desc>
+  <rect width="800" height="500" fill="#20262c"/>
+  <path d="M58 384V134h120v250M178 384V92h96v292M274 384V158h118v226M392 384V113h114v271M506 384V151h114v233M620 384V104h122v280" fill="none" stroke="#7b878e" stroke-width="11"/>
+  <path d="M58 384h684M58 134l120-42 96 66 118-45 114 38 114-47 122 30" fill="none" stroke="#a7b1b6" stroke-width="4"/>
+  <circle cx="176" cy="204" r="27" fill="#d9a441"/>
+  <path d="M176 177v-28M151 187l-25-14M201 187l25-14" stroke="#d9a441" stroke-width="5"/>
+  <path d="M176 204C270 161 361 185 456 233s168 47 255 10" fill="none" stroke="#58a4ca" stroke-width="6" stroke-dasharray="13 11"/>
+  <path d="M176 204l215-91 250 73 70 57-255-10z" fill="#1f5b83" opacity="0.28" stroke="#58a4ca" stroke-width="3"/>
+  <rect x="70" y="54" width="286" height="55" fill="#f2f4f4"/>
+  <text x="94" y="88" font-family="Arial, sans-serif" font-size="22" fill="#1f5b83">PANORAMIC + VECTOR SPACE</text>
+  <text x="531" y="447" font-family="Arial, sans-serif" font-size="18" fill="#c7cfd3">REAL-WORLD SYSTEMS</text>
+</svg>

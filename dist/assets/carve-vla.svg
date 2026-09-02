@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">CARVE-VLA concept visual</title>
+  <desc id="desc">Visual observations and language instructions flow into an embodied agent that produces a spatial action trajectory.</desc>
+  <rect width="800" height="500" fill="#eef2f4"/>
+  <rect x="55" y="70" width="205" height="135" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
+  <path d="M75 171l48-45 37 28 49-54 31 36" fill="none" stroke="#1f5b83" stroke-width="7"/>
+  <circle cx="112" cy="108" r="15" fill="#d9a441"/>
+  <rect x="55" y="237" width="205" height="100" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
+  <path d="M82 272h150M82 300h112" stroke="#57636c" stroke-width="8"/>
+  <path d="M285 203h92" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M365 191l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
+  <circle cx="478" cy="205" r="77" fill="#dfe9ef" stroke="#1f5b83" stroke-width="3"/>
+  <circle cx="478" cy="176" r="22" fill="#1f5b83"/>
+  <path d="M433 248c8-38 24-57 45-57s37 19 45 57" fill="#6d96ad"/>
+  <path d="M555 205h100" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M643 193l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M612 344c31-72 71-68 104-108" fill="none" stroke="#d9a441" stroke-width="7" stroke-dasharray="11 11"/>
+  <circle cx="612" cy="344" r="17" fill="#1f5b83"/>
+  <circle cx="716" cy="236" r="17" fill="#d9a441"/>
+  <path d="M612 371v45M590 396h44" stroke="#57636c" stroke-width="6"/>
+  <text x="55" y="388" font-family="Arial, sans-serif" font-size="18" fill="#57636c">VISION + LANGUAGE</text>
+  <text x="402" y="318" font-family="Arial, sans-serif" font-size="18" fill="#1f5b83">SPATIAL AGENT</text>
+  <text x="626" y="458" font-family="Arial, sans-serif" font-size="18" fill="#57636c">ACTION</text>
+</svg>

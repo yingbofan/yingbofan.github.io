@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">CM-YOLOv8 concept visual</title>
+  <desc id="desc">A stylized underground scene with detection boxes and an efficient model indicator.</desc>
+  <rect width="800" height="500" fill="#1e252b"/>
+  <path d="M0 80h800M0 420h800" stroke="#65717a" stroke-width="3"/>
+  <path d="M72 420V190l76-56 76 56v230M225 420V142h95v278M560 420V172h105v248" fill="none" stroke="#8d999f" stroke-width="12"/>
+  <circle cx="405" cy="208" r="27" fill="#d9a441"/>
+  <path d="M364 338c8-72 22-105 41-105s33 33 41 105" fill="#9db6c5"/>
+  <rect x="342" y="166" width="128" height="190" fill="none" stroke="#51a6cf" stroke-width="5"/>
+  <rect x="545" y="151" width="140" height="286" fill="none" stroke="#d9a441" stroke-width="5"/>
+  <rect x="50" y="52" width="260" height="68" fill="#f3f5f6"/>
+  <text x="74" y="95" font-family="Arial, sans-serif" font-size="24" fill="#1f5b83">LIGHTWEIGHT DETECTION</text>
+  <text x="348" y="390" font-family="Arial, sans-serif" font-size="18" fill="#d6dde1">MINER</text>
+  <text x="552" y="466" font-family="Arial, sans-serif" font-size="18" fill="#d6dde1">SUPPORT</text>
+</svg>

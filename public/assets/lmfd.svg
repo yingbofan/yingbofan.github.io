@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">LMFD concept visual</title>
+  <desc id="desc">Local image patterns are encoded into compact binary descriptors for robust matching.</desc>
+  <rect width="800" height="500" fill="#eef2f4"/>
+  <rect x="54" y="84" width="245" height="245" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
+  <path d="M54 268l88-82 58 40 99-104v207H54z" fill="#dfe9ef"/>
+  <circle cx="182" cy="211" r="18" fill="#d9a441" stroke="#1f5b83" stroke-width="4"/>
+  <circle cx="182" cy="211" r="67" fill="none" stroke="#1f5b83" stroke-width="3" stroke-dasharray="9 8"/>
+  <path d="M318 211h77" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M383 199l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
+  <g transform="translate(435 90)">
+    <rect width="260" height="238" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
+    <g>
+      <rect x="28" y="25" width="38" height="38" fill="#1f5b83"/><rect x="75" y="25" width="38" height="38" fill="#d7dde0"/><rect x="122" y="25" width="38" height="38" fill="#1f5b83"/><rect x="169" y="25" width="38" height="38" fill="#1f5b83"/>
+      <rect x="28" y="72" width="38" height="38" fill="#d7dde0"/><rect x="75" y="72" width="38" height="38" fill="#1f5b83"/><rect x="122" y="72" width="38" height="38" fill="#d9a441"/><rect x="169" y="72" width="38" height="38" fill="#d7dde0"/>
+      <rect x="28" y="119" width="38" height="38" fill="#1f5b83"/><rect x="75" y="119" width="38" height="38" fill="#1f5b83"/><rect x="122" y="119" width="38" height="38" fill="#d7dde0"/><rect x="169" y="119" width="38" height="38" fill="#1f5b83"/>
+      <rect x="28" y="166" width="38" height="38" fill="#d7dde0"/><rect x="75" y="166" width="38" height="38" fill="#1f5b83"/><rect x="122" y="166" width="38" height="38" fill="#1f5b83"/><rect x="169" y="166" width="38" height="38" fill="#d7dde0"/>
+    </g>
+  </g>
+  <text x="78" y="394" font-family="Arial, sans-serif" font-size="18" fill="#57636c">LOCAL FEATURES</text>
+  <text x="472" y="394" font-family="Arial, sans-serif" font-size="18" fill="#57636c">BINARY DESCRIPTOR</text>
+</svg>

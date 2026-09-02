@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">HFPQ concept visual</title>
+  <desc id="desc">A dense neural network is pruned and quantized into a compact hardware-friendly representation.</desc>
+  <rect width="800" height="500" fill="#eef2f4"/>
+  <g stroke="#6d96ad" stroke-width="3">
+    <path d="M98 125l135 82M98 125l135 0M98 125l135 164M98 207l135-82M98 207l135 82M98 289l135-82M98 289l135 82M98 371l135-82"/>
+  </g>
+  <g fill="#1f5b83"><circle cx="98" cy="125" r="16"/><circle cx="98" cy="207" r="16"/><circle cx="98" cy="289" r="16"/><circle cx="98" cy="371" r="16"/><circle cx="233" cy="125" r="16"/><circle cx="233" cy="207" r="16"/><circle cx="233" cy="289" r="16"/><circle cx="233" cy="371" r="16"/></g>
+  <path d="M282 248h86" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M356 236l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
+  <g transform="translate(420 102)">
+    <rect width="310" height="290" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
+    <g fill="#1f5b83"><rect x="33" y="35" width="48" height="48"/><rect x="96" y="35" width="48" height="48"/><rect x="222" y="35" width="48" height="48"/><rect x="33" y="98" width="48" height="48"/><rect x="159" y="98" width="48" height="48"/><rect x="222" y="161" width="48" height="48"/><rect x="96" y="224" width="48" height="48"/></g>
+    <g fill="#d9a441"><rect x="159" y="35" width="48" height="48"/><rect x="96" y="161" width="48" height="48"/><rect x="159" y="224" width="48" height="48"/></g>
+    <g fill="#d7dde0"><rect x="96" y="98" width="48" height="48"/><rect x="222" y="98" width="48" height="48"/><rect x="33" y="161" width="48" height="48"/><rect x="159" y="161" width="48" height="48"/><rect x="33" y="224" width="48" height="48"/><rect x="222" y="224" width="48" height="48"/></g>
+  </g>
+  <text x="77" y="442" font-family="Arial, sans-serif" font-size="18" fill="#57636c">DENSE NETWORK</text>
+  <text x="470" y="442" font-family="Arial, sans-serif" font-size="18" fill="#57636c">PRUNE + QUANTIZE</text>
+</svg>

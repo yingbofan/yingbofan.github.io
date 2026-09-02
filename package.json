@@ -1,0 +1,11 @@
+{
+  "name": "yingbo-academic-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs && node --check dist/assets/site.js",
+    "serve": "python3 -m http.server 4173 -d dist"
+  }
+}

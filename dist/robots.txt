@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://evan-fan-bit.github.io/sitemap.xml

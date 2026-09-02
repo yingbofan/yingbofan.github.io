@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Lightweight world models concept visual</title>
+  <desc id="desc">A sequence of visual states is compressed into compact latent representations used for prediction and planning.</desc>
+  <rect width="800" height="500" fill="#eef2f4"/>
+  <rect x="58" y="82" width="145" height="110" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
+  <rect x="82" y="118" width="47" height="47" fill="#6d96ad"/>
+  <circle cx="164" cy="141" r="22" fill="#d9a441"/>
+  <rect x="58" y="225" width="145" height="110" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
+  <rect x="102" y="258" width="47" height="47" fill="#6d96ad"/>
+  <circle cx="169" cy="283" r="22" fill="#d9a441"/>
+  <path d="M230 207h94" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M312 195l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
+  <g fill="#1f5b83">
+    <rect x="360" y="105" width="29" height="29"/><rect x="398" y="105" width="29" height="29"/><rect x="436" y="105" width="29" height="29"/>
+    <rect x="360" y="143" width="29" height="29" fill="#6d96ad"/><rect x="398" y="143" width="29" height="29" fill="#d9a441"/><rect x="436" y="143" width="29" height="29" fill="#6d96ad"/>
+    <rect x="360" y="181" width="29" height="29"/><rect x="398" y="181" width="29" height="29" fill="#6d96ad"/><rect x="436" y="181" width="29" height="29"/>
+  </g>
+  <g fill="#1f5b83">
+    <rect x="378" y="260" width="29" height="29"/><rect x="416" y="260" width="29" height="29" fill="#d9a441"/>
+    <rect x="378" y="298" width="29" height="29" fill="#6d96ad"/><rect x="416" y="298" width="29" height="29"/>
+  </g>
+  <path d="M493 217h92" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M573 205l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
+  <path d="M635 315c2-87 32-115 80-174" fill="none" stroke="#d9a441" stroke-width="7" stroke-dasharray="11 10"/>
+  <circle cx="635" cy="315" r="18" fill="#1f5b83"/>
+  <circle cx="715" cy="141" r="18" fill="#d9a441"/>
+  <path d="M620 351h110M641 377h68" stroke="#57636c" stroke-width="6"/>
+  <text x="60" y="393" font-family="Arial, sans-serif" font-size="18" fill="#57636c">OBSERVATIONS</text>
+  <text x="350" y="393" font-family="Arial, sans-serif" font-size="18" fill="#57636c">COMPACT LATENTS</text>
+  <text x="625" y="430" font-family="Arial, sans-serif" font-size="18" fill="#57636c">PLAN</text>
+</svg>
