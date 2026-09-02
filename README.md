@@ -2,6 +2,8 @@
 
 A custom, zero-dependency static academic website designed for GitHub Pages.
 
+Live site: <https://evan-fan-bit.github.io>
+
 ## Structure
 
 - `content/site.json` — the single source of truth for profile information, metrics, research highlights, publications, projects, patents, education, and awards.
