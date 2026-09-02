@@ -1,22 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">LMFD concept visual</title>
-  <desc id="desc">Local image patterns are encoded into compact binary descriptors for robust matching.</desc>
-  <rect width="800" height="500" fill="#eef2f4"/>
-  <rect x="54" y="84" width="245" height="245" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
-  <path d="M54 268l88-82 58 40 99-104v207H54z" fill="#dfe9ef"/>
-  <circle cx="182" cy="211" r="18" fill="#d9a441" stroke="#1f5b83" stroke-width="4"/>
-  <circle cx="182" cy="211" r="67" fill="none" stroke="#1f5b83" stroke-width="3" stroke-dasharray="9 8"/>
-  <path d="M318 211h77" stroke="#1f5b83" stroke-width="4"/>
-  <path d="M383 199l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
-  <g transform="translate(435 90)">
-    <rect width="260" height="238" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
-    <g>
-      <rect x="28" y="25" width="38" height="38" fill="#1f5b83"/><rect x="75" y="25" width="38" height="38" fill="#d7dde0"/><rect x="122" y="25" width="38" height="38" fill="#1f5b83"/><rect x="169" y="25" width="38" height="38" fill="#1f5b83"/>
-      <rect x="28" y="72" width="38" height="38" fill="#d7dde0"/><rect x="75" y="72" width="38" height="38" fill="#1f5b83"/><rect x="122" y="72" width="38" height="38" fill="#d9a441"/><rect x="169" y="72" width="38" height="38" fill="#d7dde0"/>
-      <rect x="28" y="119" width="38" height="38" fill="#1f5b83"/><rect x="75" y="119" width="38" height="38" fill="#1f5b83"/><rect x="122" y="119" width="38" height="38" fill="#d7dde0"/><rect x="169" y="119" width="38" height="38" fill="#1f5b83"/>
-      <rect x="28" y="166" width="38" height="38" fill="#d7dde0"/><rect x="75" y="166" width="38" height="38" fill="#1f5b83"/><rect x="122" y="166" width="38" height="38" fill="#1f5b83"/><rect x="169" y="166" width="38" height="38" fill="#d7dde0"/>
-    </g>
+  <title id="title">LMFD lightweight multi-feature descriptor method summary</title>
+  <desc id="desc">Verified schematic of symbolic, mean, and centroid binary descriptors used for robust feature matching and stitching.</desc>
+  <rect width="800" height="500" rx="24" fill="#f4f7f8"/>
+  <text x="38" y="48" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#143a52">LMFD · LIGHTWEIGHT MULTI-FEATURE DESCRIPTORS</text>
+  <text x="38" y="72" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#687983">PAPER METHOD SUMMARY · SCIENTIFIC REPORTS 2023</text>
+  <rect x="38" y="104" width="182" height="230" rx="14" fill="#fff" stroke="#ccd8dd"/>
+  <text x="56" y="131" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#566771">LOCAL PATCH</text>
+  <rect x="58" y="149" width="142" height="142" rx="6" fill="#e2ebef"/>
+  <path d="M58 252l38-51 31 23 30-49 43 35v81H58z" fill="#aec7d2"/>
+  <circle cx="129" cy="220" r="47" fill="none" stroke="#2a6688" stroke-width="2" stroke-dasharray="6 5"/><circle cx="129" cy="220" r="9" fill="#d5a33d"/>
+  <path d="M232 219h26" stroke="#2d6c91" stroke-width="3"/><path d="M250 212l10 7-10 7" fill="none" stroke="#2d6c91" stroke-width="3"/>
+  <rect x="272" y="104" width="263" height="230" rx="14" fill="#fff" stroke="#ccd8dd"/>
+  <text x="292" y="131" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#566771">THREE COMPLEMENTARY CUES</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <circle cx="319" cy="174" r="21" fill="#173f58"/><text x="319" y="180" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">S</text><text x="350" y="171" font-size="11" font-weight="700" fill="#1e5776">SYMBOLIC</text><text x="350" y="187" font-size="9" fill="#566771">local ordering pattern</text>
+    <circle cx="319" cy="224" r="21" fill="#2c7298"/><text x="319" y="230" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">M</text><text x="350" y="221" font-size="11" font-weight="700" fill="#1e5776">MEAN</text><text x="350" y="237" font-size="9" fill="#566771">regional intensity statistic</text>
+    <circle cx="319" cy="274" r="21" fill="#d4a23c"/><text x="319" y="280" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">C</text><text x="350" y="271" font-size="11" font-weight="700" fill="#1e5776">CENTROID</text><text x="350" y="287" font-size="9" fill="#566771">spatial distribution cue</text>
   </g>
-  <text x="78" y="394" font-family="Arial, sans-serif" font-size="18" fill="#57636c">LOCAL FEATURES</text>
-  <text x="472" y="394" font-family="Arial, sans-serif" font-size="18" fill="#57636c">BINARY DESCRIPTOR</text>
+  <rect x="292" y="304" width="223" height="18" rx="5" fill="#edf3f5"/><text x="404" y="317" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="8" font-weight="700" fill="#566771">MSC · MCS · SMC · SCM · CMS · CSM</text>
+  <path d="M547 219h26" stroke="#2d6c91" stroke-width="3"/><path d="M565 212l10 7-10 7" fill="none" stroke="#2d6c91" stroke-width="3"/>
+  <rect x="587" y="104" width="175" height="230" rx="14" fill="#173f58"/>
+  <text x="607" y="131" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">BINARY CODE</text>
+  <g transform="translate(608 151)"><g fill="#f5f8f9"><rect width="22" height="22"/><rect x="54" width="22" height="22"/><rect x="108" width="22" height="22"/><rect y="54" width="22" height="22"/><rect x="27" y="27" width="22" height="22"/><rect x="81" y="27" width="22" height="22"/><rect x="108" y="54" width="22" height="22"/><rect x="27" y="81" width="22" height="22"/><rect x="81" y="81" width="22" height="22"/><rect y="108" width="22" height="22"/><rect x="54" y="108" width="22" height="22"/><rect x="108" y="108" width="22" height="22"/></g><g fill="#4a93b5"><rect x="27" width="22" height="22"/><rect x="81" width="22" height="22"/><rect y="27" width="22" height="22"/><rect x="54" y="27" width="22" height="22"/><rect x="108" y="27" width="22" height="22"/><rect x="27" y="54" width="22" height="22"/><rect x="54" y="54" width="22" height="22"/><rect x="81" y="54" width="22" height="22"/><rect y="81" width="22" height="22"/><rect x="54" y="81" width="22" height="22"/><rect x="108" y="81" width="22" height="22"/><rect x="27" y="108" width="22" height="22"/><rect x="81" y="108" width="22" height="22"/></g></g>
+  <text x="675" y="308" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" fill="#d3e2e8">hardware-friendly encoding</text>
+  <rect x="38" y="365" width="724" height="97" rx="14" fill="#e5eef2"/>
+  <g font-family="Inter,Arial,sans-serif" text-anchor="middle"><rect x="60" y="390" width="153" height="42" rx="9" fill="#fff"/><text x="137" y="415" font-size="11" font-weight="700" fill="#1e5776">FEATURE MATCH</text><path d="M222 411h40" stroke="#2d6c91" stroke-width="2"/><path d="M254 405l9 6-9 6" fill="none" stroke="#2d6c91" stroke-width="2"/><rect x="272" y="390" width="153" height="42" rx="9" fill="#fff"/><text x="349" y="415" font-size="11" font-weight="700" fill="#1e5776">ALIGN</text><path d="M434 411h40" stroke="#2d6c91" stroke-width="2"/><path d="M466 405l9 6-9 6" fill="none" stroke="#2d6c91" stroke-width="2"/><rect x="484" y="390" width="254" height="42" rx="9" fill="#173f58"/><text x="611" y="408" font-size="11" font-weight="700" fill="#fff">IMAGE STITCHING</text><text x="611" y="422" font-size="8" fill="#cfe2ed">rotation · noise · viewpoint · illumination</text></g>
 </svg>

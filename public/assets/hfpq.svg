@@ -1,19 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">HFPQ concept visual</title>
-  <desc id="desc">A dense neural network is pruned and quantized into a compact hardware-friendly representation.</desc>
-  <rect width="800" height="500" fill="#eef2f4"/>
-  <g stroke="#6d96ad" stroke-width="3">
-    <path d="M98 125l135 82M98 125l135 0M98 125l135 164M98 207l135-82M98 207l135 82M98 289l135-82M98 289l135 82M98 371l135-82"/>
+  <title id="title">HFPQ hardware-friendly pruning and quantization method summary</title>
+  <desc id="desc">Verified schematic of layer-wise channel pruning, retraining, and power-of-two quantization for efficient deployment.</desc>
+  <rect width="800" height="500" rx="24" fill="#f4f7f8"/>
+  <text x="38" y="48" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#143a52">HFPQ · HARDWARE-FRIENDLY COMPRESSION</text>
+  <text x="38" y="72" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#687983">PAPER METHOD SUMMARY · APPLIED INTELLIGENCE 2021</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="38" y="112" width="155" height="223" rx="14" fill="#fff" stroke="#ccd8dd"/><text x="58" y="140" font-size="11" font-weight="700" fill="#566771">1 · TRAINED WEIGHTS</text>
+    <g stroke="#83a4b4" stroke-width="2"><path d="M74 181l77 0M74 181l77 45M74 226l77-45M74 226h77M74 271l77-45M74 271h77"/></g><g fill="#255f7f"><circle cx="74" cy="181" r="10"/><circle cx="74" cy="226" r="10"/><circle cx="74" cy="271" r="10"/><circle cx="151" cy="181" r="10"/><circle cx="151" cy="226" r="10"/><circle cx="151" cy="271" r="10"/></g><text x="116" y="315" text-anchor="middle" font-size="9" fill="#687983">dense network</text>
+    <path d="M202 223h22" stroke="#2d6c91" stroke-width="3"/><path d="M216 216l10 7-10 7" fill="none" stroke="#2d6c91" stroke-width="3"/>
+    <rect x="238" y="112" width="155" height="223" rx="14" fill="#fff" stroke="#ccd8dd"/><text x="258" y="140" font-size="11" font-weight="700" fill="#566771">2 · LAYER PRUNING</text>
+    <g transform="translate(266 167)"><g fill="#2a6688"><rect width="24" height="24"/><rect x="34" width="24" height="24"/><rect x="68" width="24" height="24"/><rect x="34" y="34" width="24" height="24"/><rect x="68" y="68" width="24" height="24"/><rect y="102" width="24" height="24"/><rect x="68" y="102" width="24" height="24"/></g><g fill="#dfe6e9"><rect y="34" width="24" height="24"/><rect x="68" y="34" width="24" height="24"/><rect y="68" width="24" height="24"/><rect x="34" y="68" width="24" height="24"/><rect x="34" y="102" width="24" height="24"/></g><path d="M3 37l18 18M21 37L3 55M71 37l18 18M89 37L71 55M3 71l18 18M21 71L3 89" stroke="#a6b4ba" stroke-width="2"/></g><text x="316" y="315" text-anchor="middle" font-size="9" fill="#687983">remove channels</text>
+    <path d="M402 223h22" stroke="#2d6c91" stroke-width="3"/><path d="M416 216l10 7-10 7" fill="none" stroke="#2d6c91" stroke-width="3"/>
+    <rect x="438" y="112" width="145" height="223" rx="14" fill="#fff" stroke="#ccd8dd"/><text x="458" y="140" font-size="11" font-weight="700" fill="#566771">3 · RETRAIN</text>
+    <path d="M483 208a42 42 0 1 1 8 58" fill="none" stroke="#2a6688" stroke-width="6"/><path d="M480 194l6 20 18-9" fill="#2a6688"/><text x="511" y="237" text-anchor="middle" font-size="23" font-weight="700" fill="#1d5675">∇</text><text x="511" y="315" text-anchor="middle" font-size="9" fill="#687983">recover accuracy</text>
+    <path d="M592 223h22" stroke="#2d6c91" stroke-width="3"/><path d="M606 216l10 7-10 7" fill="none" stroke="#2d6c91" stroke-width="3"/>
+    <rect x="628" y="112" width="134" height="223" rx="14" fill="#173f58"/><text x="648" y="140" font-size="11" font-weight="700" fill="#fff">4 · POWER-OF-2</text><text x="648" y="156" font-size="11" font-weight="700" fill="#fff">QUANTIZATION</text>
+    <g text-anchor="middle" font-size="13" font-weight="700"><rect x="650" y="182" width="40" height="38" rx="7" fill="#edf4f7"/><text x="670" y="206" fill="#173f58">2⁻²</text><rect x="700" y="182" width="40" height="38" rx="7" fill="#d9aa43"/><text x="720" y="206" fill="#173f58">2⁻¹</text><rect x="650" y="230" width="40" height="38" rx="7" fill="#d9aa43"/><text x="670" y="254" fill="#173f58">2⁰</text><rect x="700" y="230" width="40" height="38" rx="7" fill="#edf4f7"/><text x="720" y="254" fill="#173f58">2¹</text></g><text x="695" y="315" text-anchor="middle" font-size="9" fill="#cfe2ed">shift-based arithmetic</text>
   </g>
-  <g fill="#1f5b83"><circle cx="98" cy="125" r="16"/><circle cx="98" cy="207" r="16"/><circle cx="98" cy="289" r="16"/><circle cx="98" cy="371" r="16"/><circle cx="233" cy="125" r="16"/><circle cx="233" cy="207" r="16"/><circle cx="233" cy="289" r="16"/><circle cx="233" cy="371" r="16"/></g>
-  <path d="M282 248h86" stroke="#1f5b83" stroke-width="4"/>
-  <path d="M356 236l18 12-18 12" fill="none" stroke="#1f5b83" stroke-width="4"/>
-  <g transform="translate(420 102)">
-    <rect width="310" height="290" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
-    <g fill="#1f5b83"><rect x="33" y="35" width="48" height="48"/><rect x="96" y="35" width="48" height="48"/><rect x="222" y="35" width="48" height="48"/><rect x="33" y="98" width="48" height="48"/><rect x="159" y="98" width="48" height="48"/><rect x="222" y="161" width="48" height="48"/><rect x="96" y="224" width="48" height="48"/></g>
-    <g fill="#d9a441"><rect x="159" y="35" width="48" height="48"/><rect x="96" y="161" width="48" height="48"/><rect x="159" y="224" width="48" height="48"/></g>
-    <g fill="#d7dde0"><rect x="96" y="98" width="48" height="48"/><rect x="222" y="98" width="48" height="48"/><rect x="33" y="161" width="48" height="48"/><rect x="159" y="161" width="48" height="48"/><rect x="33" y="224" width="48" height="48"/><rect x="222" y="224" width="48" height="48"/></g>
-  </g>
-  <text x="77" y="442" font-family="Arial, sans-serif" font-size="18" fill="#57636c">DENSE NETWORK</text>
-  <text x="470" y="442" font-family="Arial, sans-serif" font-size="18" fill="#57636c">PRUNE + QUANTIZE</text>
+  <rect x="38" y="365" width="724" height="97" rx="14" fill="#e5eef2"/>
+  <path d="M60 409h450" stroke="#7c9aaa" stroke-width="2" stroke-dasharray="5 5"/><path d="M502 403l9 6-9 6" fill="none" stroke="#2d6c91" stroke-width="2"/>
+  <text x="60" y="394" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#566771">ITERATIVE GROUPING · QUANTIZATION · RETRAINING</text>
+  <rect x="529" y="383" width="209" height="58" rx="10" fill="#173f58"/><text x="634" y="407" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">COMPACT MODEL</text><text x="634" y="426" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="9" fill="#cfe2ed">↓ memory · ↓ MACs · ↓ logic gates</text>
 </svg>
