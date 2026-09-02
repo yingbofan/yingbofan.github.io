@@ -257,12 +257,13 @@ p {
 .portrait-wrap {
   align-self: center;
   margin: 0;
+  aspect-ratio: 4 / 5;
 }
 
 .portrait-wrap img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   aspect-ratio: 4 / 5;
   border: 1px solid var(--line);
   background: var(--surface-soft);
