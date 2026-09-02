@@ -33,7 +33,6 @@ GitHub Actions builds and deploys the site automatically.
 
 ## Items intentionally left provisional
 
-- Replace `public/assets/profile-placeholder.svg` with a real portrait while keeping the same filename, or update the path in `scripts/build.mjs`.
 - Replace the concept teaser SVGs with paper figures when those materials are public.
 - Replace the Google Scholar and Semantic Scholar search links with verified author-profile URLs when available.
 - Add public paper, code, project, and demo links for ongoing research after release.

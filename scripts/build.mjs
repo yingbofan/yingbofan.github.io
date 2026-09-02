@@ -154,7 +154,7 @@ function homePage() {
         <h1>${escapeHtml(data.site.name)}</h1>
         <p class="hero-tagline">${escapeHtml(data.site.tagline)}</p>
         <p class="hero-mission">${escapeHtml(data.site.mission)}</p>
-        <p class="research-keywords">Embodied AI · Panoramic Vision · 3D Scene Understanding · Efficient World Models</p>
+        <p class="research-keywords">${data.site.keywords.map(escapeHtml).join(' · ')}</p>
         <div class="profile-links">${profileLinks()}<a class="text-link" href="/cv/">CV →</a></div>
       </div>
       <div class="portrait-wrap">
@@ -164,7 +164,7 @@ function homePage() {
 
     <section class="record-band" aria-labelledby="record-heading">
       <div class="shell">
-        <p class="record-label" id="record-heading">Selected academic record</p>
+        <p class="record-label" id="record-heading">Academic output at a glance</p>
         <div class="metrics-grid">
           ${data.stats.map((stat) => `<div class="metric"><p class="metric-value">${escapeHtml(stat.value)}</p><p class="metric-label">${escapeHtml(stat.label)}</p><p class="metric-detail">${escapeHtml(stat.detail)}</p></div>`).join('')}
         </div>
@@ -172,8 +172,8 @@ function homePage() {
     </section>
 
     <section class="section shell research-arc-section">
-      ${sectionHeading('Research agenda', 'See. Model. Act.')}
-      <p class="section-intro">My research connects geometric perception, efficient predictive representations, and embodied action. Complex industrial environments provide a demanding real-world testbed for this agenda.</p>
+      ${sectionHeading('Research vision', 'Understand. Predict. Act.')}
+      <p class="section-intro">My research asks a unified question: how can an intelligent system build a multimodal model of space, anticipate how that world will evolve, and act reliably within it? I approach this through representation, prediction, and deployment.</p>
       <div class="research-arc">
         ${data.researchArc.map((item) => `<article><p class="arc-index">${escapeHtml(item.index)}</p><p class="arc-verb">${escapeHtml(item.verb)}</p><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p></article>`).join('')}
       </div>
@@ -181,30 +181,31 @@ function homePage() {
 
     <section class="section section-tint">
       <div class="shell">
-        ${sectionHeading('Current focus', 'Featured research', '<a class="section-link" href="/projects/">All projects →</a>')}
+        ${sectionHeading('Current agenda', 'Research frontiers', '<a class="section-link" href="/projects/">All projects →</a>')}
         <div class="feature-list">${data.featured.map(featuredRow).join('')}</div>
       </div>
     </section>
 
     <section class="section shell">
       ${sectionHeading('Research output', 'Selected publications', '<a class="section-link" href="/publications/">Full publication list →</a>')}
+      <p class="section-intro">Foundational work in robust perception, efficient models, spatial vision, and intelligent mining.</p>
       <div class="publication-list">${selected.map(publicationCard).join('')}</div>
     </section>
 
     <section class="section applied-section">
       <div class="shell applied-grid">
-        <div class="applied-visual"><img src="/assets/industrial-spatial.svg" alt="Concept illustration of spatial intelligence for complex industrial environments" loading="lazy"></div>
+        <div class="applied-visual"><img src="/assets/industrial-spatial.svg" alt="Concept illustration of multimodal spatial intelligence for intelligent mining" loading="lazy"></div>
         <div class="applied-copy">
-          <p class="eyebrow">Applied research</p>
-          <h2>Spatial intelligence in complex environments</h2>
-          <p>My earlier work uses underground mines, longwall faces, and digital-twin systems as real-world settings for robust perception, panoramic video fusion, 3D reconstruction, and efficient visual computing.</p>
-          <a class="text-link" href="/projects/">Explore research systems and projects →</a>
+          <p class="eyebrow">Real-world frontier</p>
+          <h2>Intelligent mining in complex physical worlds</h2>
+          <p>Mines are large-scale, dynamic, and partially observable 3D environments where perception, prediction, and action must remain reliable under dust, low illumination, occlusion, and constrained computation. I use this frontier to study deployable multimodal intelligence, panoramic sensing, 3D digital twins, and decision support.</p>
+          <a class="text-link" href="/projects/">Explore intelligent mining research →</a>
         </div>
       </div>
     </section>
 
     <section class="section shell">
-      ${sectionHeading('Selected programs', 'Research projects', '<a class="section-link" href="/projects/">View all projects →</a>')}
+      ${sectionHeading('Research at scale', 'Selected programs', '<a class="section-link" href="/projects/">View all projects →</a>')}
       <div class="project-preview-grid">
         ${latestProjects.map((project) => `<article><p class="project-period">${escapeHtml(project.period)}</p><h3>${escapeHtml(project.title)}</h3><p class="project-program">${escapeHtml(project.program)}</p><p>${escapeHtml(project.description)}</p></article>`).join('')}
       </div>
@@ -253,7 +254,7 @@ function projectsPage() {
     <section class="page-hero shell">
       <p class="eyebrow">Research and systems</p>
       <h1>Projects</h1>
-      <p>Research spanning embodied intelligence, panoramic perception, efficient models, 3D scene understanding, and complex industrial environments.</p>
+      <p>Research connecting multimodal spatial understanding, predictive world models, embodied decision-making, and intelligent mining in complex physical environments.</p>
     </section>
     <section class="page-section shell">
       ${sectionHeading('Current agenda', 'Research directions')}
@@ -269,8 +270,8 @@ function projectsPage() {
       </div>
     </section>
     <section class="page-section shell system-story">
-      <div><img src="/assets/industrial-spatial.svg" alt="Concept illustration for panoramic video fusion and spatial intelligence"></div>
-      <div><p class="eyebrow">Real-world grounding</p><h2>From spatial perception to operational systems</h2><p>Across these projects, recurring technical themes include panoramic and multi-view sensing, vector-space modeling, depth enhancement, point-cloud reconstruction, multimodal fusion, and efficient deployment. This experience provides an applied foundation for current work on embodied intelligence and world models.</p></div>
+      <div><img src="/assets/industrial-spatial.svg" alt="Concept illustration for multimodal spatial intelligence and intelligent mining"></div>
+      <div><p class="eyebrow">Intelligence in the wild</p><h2>From world understanding to operational intelligence</h2><p>Across these projects, panoramic and multi-view sensing, vector-space modeling, 3D reconstruction, multimodal fusion, and efficient deployment form a continuous research program. Intelligent mining provides a rigorous physical-world frontier for advancing spatial intelligence and world models beyond controlled settings.</p></div>
     </section>`;
   return layout({ title: 'Projects', description: `Research projects by ${data.site.name}.`, active: 'projects', pathname: '/projects/', content });
 }

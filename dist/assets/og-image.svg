@@ -5,7 +5,7 @@
   <rect x="72" y="72" width="1056" height="486" fill="#ffffff" stroke="#d8dce0" stroke-width="2"/>
   <path d="M72 455h1056" stroke="#1f5b83" stroke-width="7"/>
   <text x="130" y="235" font-family="Arial, sans-serif" font-size="92" font-weight="600" fill="#15191f">Yingbo Fan</text>
-  <text x="135" y="304" font-family="Arial, sans-serif" font-size="32" fill="#1f5b83">From panoramic perception to embodied action.</text>
-  <text x="135" y="380" font-family="Arial, sans-serif" font-size="24" fill="#626973">Embodied AI · Panoramic Vision · 3D Scene Understanding · World Models</text>
+  <text x="135" y="304" font-family="Arial, sans-serif" font-size="30" fill="#1f5b83">Multimodal intelligence for complex spaces.</text>
+  <text x="135" y="380" font-family="Arial, sans-serif" font-size="24" fill="#626973">Spatial Intelligence · World Models · Intelligent Mining</text>
   <text x="135" y="510" font-family="Arial, sans-serif" font-size="24" fill="#626973">Peking University</text>
 </svg>

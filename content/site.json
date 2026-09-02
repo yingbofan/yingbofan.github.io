@@ -7,9 +7,10 @@
     "affiliation": "School of Earth and Space Sciences, Peking University",
     "location": "Beijing, China",
     "email": "ybfan@pku.edu.cn",
-    "tagline": "From panoramic perception to embodied action.",
-    "mission": "I build spatially grounded intelligent systems that perceive panoramic worlds, construct consistent 3D representations, model dynamics efficiently, and act through vision-language-action.",
-    "description": "Academic homepage of Yingbo Fan, a computer vision and embodied intelligence researcher at Peking University.",
+    "tagline": "Multimodal intelligence for understanding, predicting, and acting in complex spaces.",
+    "mission": "I develop multimodal spatial intelligence that integrates visual perception, 3D geometry, language, and dynamics. My research focuses on efficient world models and grounded decision-making, with intelligent mining as a defining real-world frontier.",
+    "description": "Academic homepage of Yingbo Fan, a researcher in multimodal spatial intelligence, world models, embodied AI, and intelligent mining at Peking University.",
+    "keywords": ["Multimodal Spatial Intelligence", "World Models", "Embodied AI", "Intelligent Mining"],
     "profiles": [
       {
         "label": "Google Scholar",
@@ -56,53 +57,53 @@
   "researchArc": [
     {
       "index": "01",
-      "verb": "See",
-      "title": "Panoramic and 3D Perception",
-      "description": "Build geometrically consistent representations from panoramic, multi-view, and spatial observations."
+      "verb": "Understand",
+      "title": "Multimodal Spatial Intelligence",
+      "description": "Fuse panoramic vision, 3D geometry, language, and multi-source sensing into structured representations of complex environments."
     },
     {
       "index": "02",
-      "verb": "Model",
+      "verb": "Predict",
       "title": "Efficient World Models",
-      "description": "Predict future states and support planning while keeping inference cost under control."
+      "description": "Learn compact predictive representations of spatial dynamics for imagination, simulation, and planning under constrained computation."
     },
     {
       "index": "03",
       "verb": "Act",
-      "title": "Embodied Intelligence and VLA",
-      "description": "Ground vision, language, and action in spatial understanding for capable embodied agents."
+      "title": "Embodied and Industrial Intelligence",
+      "description": "Translate spatial understanding and predictive models into grounded action for embodied agents and intelligent mining systems."
     }
   ],
   "featured": [
     {
       "slug": "carve-vla",
-      "category": "Embodied Intelligence",
+      "category": "Multimodal Spatial Intelligence",
       "title": "CARVE-VLA",
-      "status": "Research in progress",
+      "status": "Flagship research direction",
       "image": "/assets/carve-vla.svg",
       "alt": "Concept illustration for CARVE-VLA showing visual observations, language, an embodied agent, and action trajectories.",
-      "description": "A vision-language-action research direction centered on spatially grounded perception, reasoning, and action for embodied agents.",
+      "description": "A vision-language-action framework that grounds multimodal reasoning in spatial structure, connecting visual observations, language, world state, and action.",
+      "links": []
+    },
+    {
+      "slug": "lightweight-world-models",
+      "category": "World Models",
+      "title": "Lightweight World Models",
+      "status": "Core research direction",
+      "image": "/assets/world-models.svg",
+      "alt": "Concept illustration of compact latent states supporting prediction and planning.",
+      "description": "A first-principles investigation of compact predictive models that preserve imagination and planning capability while reducing inference cost.",
       "links": []
     },
     {
       "slug": "one-sphere-many-charts",
-      "category": "Panoramic Geometry",
+      "category": "Geometry-Aware Spatial Perception",
       "title": "One Sphere, Many Charts",
       "subtitle": "Group-Consistent Panoramic Depth from Frozen Foundation Models",
       "status": "Research in progress",
       "image": "/assets/one-sphere.svg",
       "alt": "Concept illustration of a sphere decomposed into multiple charts for panoramic depth estimation.",
-      "description": "Panoramic depth estimation that adapts frozen foundation models to spherical geometry through chart-based representations and group consistency.",
-      "links": []
-    },
-    {
-      "slug": "lightweight-world-models",
-      "category": "Efficient Intelligence",
-      "title": "Lightweight World Models",
-      "status": "Exploratory research direction",
-      "image": "/assets/world-models.svg",
-      "alt": "Concept illustration of compact latent states supporting prediction and planning.",
-      "description": "A first-principles exploration of world-model design that retains planning capability while reducing the cost of inference.",
+      "description": "A geometry-aware approach that transfers frozen foundation models to panoramic depth estimation through chart-based representations and group consistency.",
       "links": []
     }
   ],
