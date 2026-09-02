@@ -19,7 +19,7 @@ const escapeHtml = (value = '') => String(value)
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#039;');
 
-const baseUrl = 'https://evan-fan-bit.github.io';
+const baseUrl = 'https://yingbofan.github.io';
 
 function profileLinks() {
   return data.site.profiles.map((item) => `

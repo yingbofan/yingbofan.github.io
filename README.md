@@ -2,7 +2,7 @@
 
 A custom, zero-dependency static academic website designed for GitHub Pages.
 
-Live site: <https://evan-fan-bit.github.io>
+Live site: <https://yingbofan.github.io>
 
 ## Structure
 
