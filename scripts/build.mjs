@@ -93,7 +93,7 @@ function layout({ title, description, active, pathname, content }) {
     <meta property="og:image" content="${baseUrl}/assets/og-image.svg">
     <link rel="canonical" href="${canonical}">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/site.css">
+    <link rel="stylesheet" href="/assets/site.css?v=20260902-portrait">
     <script type="application/ld+json">${JSON.stringify(jsonLd).replaceAll('<', '\\u003c')}</script>
     <script src="/assets/site.js" defer></script>
     <title>${escapeHtml(pageTitle)}</title>
@@ -158,7 +158,7 @@ function homePage() {
         <div class="profile-links">${profileLinks()}<a class="text-link" href="/cv/">CV →</a></div>
       </div>
       <div class="portrait-wrap">
-        <img src="/assets/yingbo-fan-portrait.webp" alt="Yingbo Fan, Postdoctoral Researcher at Peking University" width="800" height="1000" fetchpriority="high" decoding="async">
+        <img src="/assets/yingbo-fan-portrait.webp" alt="Yingbo Fan, Postdoctoral Researcher at Peking University" fetchpriority="high" decoding="async">
       </div>
     </section>
 
