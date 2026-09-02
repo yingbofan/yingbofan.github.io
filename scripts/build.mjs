@@ -158,8 +158,7 @@ function homePage() {
         <div class="profile-links">${profileLinks()}<a class="text-link" href="/cv/">CV →</a></div>
       </div>
       <div class="portrait-wrap">
-        <img src="/assets/profile-placeholder.svg" alt="Portrait placeholder for Yingbo Fan">
-        <p>Portrait to be updated</p>
+        <img src="/assets/yingbo-fan-portrait.webp" alt="Yingbo Fan, Postdoctoral Researcher at Peking University" width="800" height="1000" fetchpriority="high" decoding="async">
       </div>
     </section>
 
