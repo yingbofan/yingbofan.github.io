@@ -117,7 +117,8 @@
       "url": "https://doi.org/10.1371/journal.pone.0334251",
       "firstAuthor": true,
       "selected": true,
-      "image": "/assets/dehazing.svg",
+      "image": "/assets/dehazing.webp",
+      "imageAlt": "Original paper comparison showing a hazy underground coal-mine image and the restored result produced by the proposed method.",
       "tags": ["Image Enhancement", "Industrial Vision", "Efficient Vision"],
       "summary": "An adaptive multi-channel method for robust and efficient image dehazing in complex underground environments."
     },
@@ -139,7 +140,8 @@
       "url": "https://doi.org/10.3390/s24061866",
       "firstAuthor": true,
       "selected": true,
-      "image": "/assets/cm-yolov8.svg",
+      "image": "/assets/cm-yolov8.webp",
+      "imageAlt": "Original CM-YOLOv8 detection results for large-coal targets in a fully mechanized coal-mining face.",
       "tags": ["Object Detection", "Model Compression", "Industrial Vision"],
       "summary": "A lightweight detection framework combining adaptive anchor design and structured pruning for resource-constrained mining environments."
     },
@@ -152,7 +154,8 @@
       "url": "https://doi.org/10.3390/app14072821",
       "firstAuthor": true,
       "selected": true,
-      "image": "/assets/rectification.svg",
+      "image": "/assets/rectification.webp",
+      "imageAlt": "Original RIS-DMRN qualitative comparison showing input, reference, proposed rectification, and label images.",
       "tags": ["Image Stitching", "Geometric Rectification", "Deep Learning"],
       "summary": "A deformable-mesh and residual-network approach for rectifying irregular stitched images while preserving image content."
     },
@@ -198,7 +201,8 @@
       "url": "https://doi.org/10.1038/s41598-023-48432-7",
       "firstAuthor": true,
       "selected": true,
-      "image": "/assets/lmfd.svg",
+      "image": "/assets/lmfd.webp",
+      "imageAlt": "Original LMFD figure showing feature-point matching under parallel and rotated views.",
       "tags": ["Local Features", "Image Stitching", "Efficient Vision"],
       "summary": "Binary multi-feature descriptors designed for robust image matching under rotation, noise, and hardware constraints."
     },
@@ -211,7 +215,8 @@
       "url": "https://doi.org/10.1007/s10489-020-01968-x",
       "firstAuthor": true,
       "selected": true,
-      "image": "/assets/hfpq.svg",
+      "image": "/assets/hfpq.webp",
+      "imageAlt": "Original HFPQ overview showing layered channel pruning, retraining, and power-of-two quantization.",
       "tags": ["Model Compression", "Pruning", "Quantization"],
       "summary": "A hardware-friendly framework that combines structured pruning and power-of-two quantization for efficient neural networks."
     }

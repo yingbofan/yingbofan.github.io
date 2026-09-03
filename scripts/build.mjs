@@ -132,7 +132,7 @@ function featuredRow(item, index) {
 
 function publicationCard(pub) {
   return `<article class="publication-card">
-    <div class="publication-thumb"><img src="${escapeHtml(pub.image || '/assets/publication.svg')}" alt="" loading="lazy"></div>
+    <div class="publication-thumb"><img src="${escapeHtml(pub.image || '/assets/publication.svg')}" alt="${escapeHtml(pub.imageAlt || '')}" loading="lazy"></div>
     <div class="publication-body">
       <div class="publication-meta"><span>${escapeHtml(pub.venue)}</span>${pub.firstAuthor ? '<span>First author</span>' : ''}</div>
       <h3>${escapeHtml(pub.title)}</h3>
