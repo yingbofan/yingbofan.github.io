@@ -1,10 +1,10 @@
 # 网站维护说明
 
-这套网站已经把个人信息、论文、项目、专利和荣誉集中在 `content/site.json` 中。日常更新通常只需要修改这个文件，不需要接触页面结构代码。
+这套网站采用中英文双语结构。英文内容集中在 `content/site.json`，中文内容集中在 `content/site.zh.json`。两个版本由同一套页面模板生成，版式和功能始终保持一致。
 
 ## 最常用的更新流程
 
-1. 修改 `content/site.json` 中对应内容。
+1. 修改 `content/site.json` 中的英文内容，并在 `content/site.zh.json` 中同步中文内容。
 2. 将新图片放入 `public/assets/`，并在数据中填写 `/assets/文件名`。
 3. 在项目目录运行：
 
@@ -23,13 +23,12 @@
 
 ## 替换个人照片
 
-- 最省事的方式：将正式照片命名为 `profile-placeholder.svg` 并覆盖现有文件。
-- 更推荐的方式：把照片保存为 `public/assets/profile.jpg`，然后在 `scripts/build.mjs` 中把 `/assets/profile-placeholder.svg` 改为 `/assets/profile.jpg`。
+- 当前正式照片为 `public/assets/yingbo-fan-portrait.webp`，直接使用同名文件覆盖即可。
 - 建议使用正方形或接近 4:5 的半身照，短边至少 800 像素，背景简洁。
 
 ## 新增论文
 
-在 `content/site.json` 的 `publications` 数组开头加入一条记录：
+先在 `content/site.json` 的 `publications` 数组开头加入英文记录，再在 `content/site.zh.json` 的相同位置加入对应中文记录：
 
 ```json
 {
@@ -50,7 +49,7 @@
 - `selected: true`：进入首页精选论文。
 - `firstAuthor: true`：进入第一作者筛选。
 - `image` 和 `summary` 可省略；有高质量代表图时建议保留。
-- 新增论文后，记得同步修改顶部 `stats` 中的论文数字。
+- 新增论文后，记得同步修改两个数据文件顶部 `stats` 中的论文数字。
 
 ## 更新 Research Highlights
 
@@ -72,7 +71,8 @@ Google Scholar、ORCID、Semantic Scholar 和邮箱位于 `site.profiles`。目�
 
 ## 页面与代码位置
 
-- `content/site.json`：全部可维护内容
+- `content/site.json`：英文版可维护内容
+- `content/site.zh.json`：中文版可维护内容
 - `public/assets/`：照片、论文代表图和图标
 - `src/styles.css`：字体、颜色、间距和响应式布局
 - `src/site.js`：移动端导航和论文筛选
@@ -88,4 +88,3 @@ Google Scholar、ORCID、Semantic Scholar 和邮箱位于 `site.profiles`。目�
 - 为 CARVE-VLA、One Sphere, Many Charts 等公开工作补充论文、项目、代码和演示链接。
 - 用公开版本的论文代表图替换概念图。
 - 提供正式 CV PDF 后，在导航和 Hero 中增加下载入口。
-

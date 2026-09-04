@@ -34,7 +34,10 @@ if (filterButtons.length && publicationRows.length) {
       button.setAttribute('aria-pressed', String(active));
     });
 
-    if (filterStatus) filterStatus.textContent = `${visible} publication${visible === 1 ? '' : 's'} shown`;
+    if (filterStatus) {
+      const template = filterStatus.dataset.filterTemplate || '{count} publications shown';
+      filterStatus.textContent = template.replace('{count}', String(visible));
+    }
   };
 
   filterButtons.forEach((button) => {

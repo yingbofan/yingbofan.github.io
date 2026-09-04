@@ -1,0 +1,299 @@
+{
+  "site": {
+    "name": "樊迎博",
+    "nameZh": "Yingbo Fan",
+    "title": "博士后研究人员",
+    "institution": "北京大学",
+    "affiliation": "北京大学地球与空间科学学院",
+    "location": "中国·北京",
+    "email": "ybfan@pku.edu.cn",
+    "tagline": "面向复杂空间理解、预测与行动的多模态智能。",
+    "mission": "我致力于研究融合视觉感知、三维几何、语言与动态建模的多模态空间智能，重点关注高效世界模型与具身决策，并以智能矿山作为连接前沿方法与复杂真实世界的重要研究场景。",
+    "description": "樊迎博的个人学术主页，研究方向包括多模态空间智能、世界模型与智能矿山。",
+    "publicationsDescription": "樊迎博在多模态空间智能、计算机视觉、高效模型与智能矿山方向的论文成果。",
+    "projectsDescription": "樊迎博在空间智能、世界模型与智能矿山方向的科研项目。",
+    "cvDescription": "樊迎博，北京大学博士后研究人员个人简历。",
+    "keywords": ["多模态空间智能", "世界模型", "智能矿山"],
+    "profiles": [
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yingbo+Fan+Peking+University",
+        "note": "作者检索"
+      },
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0009-0009-9276-9549"
+      },
+      {
+        "label": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/search?q=Yingbo%20Fan%20Peking%20University&sort=relevance",
+        "note": "作者检索"
+      },
+      {
+        "label": "邮箱",
+        "url": "mailto:ybfan@pku.edu.cn"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "8",
+      "label": "SCI 论文",
+      "detail": "共发表论文 9 篇"
+    },
+    {
+      "value": "5",
+      "label": "第一作者 SCI 论文",
+      "detail": "计算机视觉与人工智能"
+    },
+    {
+      "value": "16",
+      "label": "授权专利",
+      "detail": "覆盖中国及多个海外国家"
+    },
+    {
+      "value": "5",
+      "label": "重大科研项目",
+      "detail": "国家级及部委级科研计划"
+    }
+  ],
+  "researchArc": [
+    {
+      "index": "01",
+      "verb": "理解",
+      "title": "多模态空间智能",
+      "description": "融合全景视觉、三维几何、语言和多源传感信息，构建复杂环境的结构化空间表征。"
+    },
+    {
+      "index": "02",
+      "verb": "预测",
+      "title": "高效世界模型",
+      "description": "学习紧凑的空间动态预测表征，在受限计算条件下支持想象、模拟与规划。"
+    },
+    {
+      "index": "03",
+      "verb": "行动",
+      "title": "智能矿山与具身系统",
+      "description": "将空间理解和预测模型转化为面向智能矿山及其他具身系统的可靠决策能力。"
+    }
+  ],
+  "featured": [
+    {
+      "slug": "carve-vla",
+      "category": "多模态空间智能",
+      "title": "CARVE-VLA",
+      "status": "旗舰研究方向",
+      "image": "/assets/carve-vla.svg",
+      "alt": "CARVE-VLA 概念图，展示视觉观测、语言、具身智能体与动作轨迹之间的联系。",
+      "description": "面向视觉-语言-动作模型的空间智能研究框架，将多模态推理建立在空间结构之上，连接视觉观测、语言、世界状态与具身行动。",
+      "links": []
+    },
+    {
+      "slug": "lightweight-world-models",
+      "category": "世界模型",
+      "title": "轻量化世界模型",
+      "status": "核心研究方向",
+      "image": "/assets/world-models.svg",
+      "alt": "紧凑潜在状态支持预测与规划的概念图。",
+      "description": "从第一性原理探索紧凑预测模型，在降低推理开销的同时保持环境想象与规划能力。",
+      "links": []
+    },
+    {
+      "slug": "one-sphere-many-charts",
+      "category": "几何感知的空间理解",
+      "title": "一球多图",
+      "subtitle": "基于冻结基础模型的群一致性全景深度估计",
+      "status": "正在开展",
+      "image": "/assets/one-sphere.svg",
+      "alt": "将球面分解为多个参数化图表进行全景深度估计的概念图。",
+      "description": "通过图表化球面表征和群一致性约束，将冻结深度基础模型迁移到全景深度估计任务。",
+      "links": []
+    }
+  ],
+  "publications": [
+    {
+      "year": 2025,
+      "title": "Adaptive Multi-Channel Dehazing for Enhanced Visibility in Underground Coal Mine Images",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Boxiang Yang, Yinglu Yang",
+      "venue": "PLOS ONE, 20(11): e0334251",
+      "doi": "10.1371/journal.pone.0334251",
+      "url": "https://doi.org/10.1371/journal.pone.0334251",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/dehazing.webp",
+      "imageAlt": "论文原图，对比煤矿井下含雾图像与所提方法的复原结果。",
+      "tags": ["图像增强", "工业视觉", "高效视觉"],
+      "summary": "面向复杂井下环境的自适应多通道图像去雾方法，兼顾鲁棒复原效果与处理效率。"
+    },
+    {
+      "year": 2025,
+      "title": "高级智能化煤矿建设发展思考",
+      "authors": "毛善君，陈华洲，刘海滨，等，樊迎博，等",
+      "venue": "《中国煤炭》",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["智能矿山"]
+    },
+    {
+      "year": 2024,
+      "title": "CM-YOLOv8: Lightweight YOLO for Coal Mine Fully Mechanized Mining Face",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Zheng Wu, Jitong Kang",
+      "venue": "Sensors, 24(6): 1866",
+      "doi": "10.3390/s24061866",
+      "url": "https://doi.org/10.3390/s24061866",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/cm-yolov8.webp",
+      "imageAlt": "CM-YOLOv8 在煤矿综采工作面进行大块煤目标检测的论文原图。",
+      "tags": ["目标检测", "模型压缩", "工业视觉"],
+      "summary": "结合自适应锚框设计与结构化剪枝的轻量目标检测框架，面向算力受限的煤矿综采工作面。"
+    },
+    {
+      "year": 2024,
+      "title": "Rectification for Stitched Images with Deformable Meshes and Residual Networks",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Zheng Wu, Jitong Kang, Ben Li",
+      "venue": "Applied Sciences, 14(7): 2821",
+      "doi": "10.3390/app14072821",
+      "url": "https://doi.org/10.3390/app14072821",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/rectification.webp",
+      "imageAlt": "RIS-DMRN 输入、参考结果、本文结果与标签图像的论文原始对比图。",
+      "tags": ["图像拼接", "几何校正", "深度学习"],
+      "summary": "利用可变形网格与宽度残差网络，将不规则拼接图像校正为规则矩形并保持内容结构。"
+    },
+    {
+      "year": 2024,
+      "title": "Experimental Study on Drilling Signal Characteristics of PDC Drill Bit in Media of Different Strengths and Identification of Weak Media",
+      "authors": "Zheng Wu, Yingbo Fan, Huazhou Chen",
+      "venue": "Sensors, 24(23): 7852",
+      "doi": "10.3390/s24237852",
+      "url": "https://doi.org/10.3390/s24237852",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["工业感知"]
+    },
+    {
+      "year": 2024,
+      "title": "A Coal Mine Tunnel Deformation Detection Method Using Point Cloud Data",
+      "authors": "Jitong Kang, Mei Li, Shanjun Mao, Yingbo Fan, Zheng Wu, Ben Li",
+      "venue": "Sensors, 24(7): 2299",
+      "doi": "10.3390/s24072299",
+      "url": "https://doi.org/10.3390/s24072299",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["点云", "三维场景理解"]
+    },
+    {
+      "year": 2024,
+      "title": "A Point Cloud Segmentation Method for Dim and Cluttered Underground Tunnel Scenes Based on the Segment Anything Model",
+      "authors": "Jitong Kang, Ning Chen, Mei Li, Shanjun Mao, Haoyuan Zhang, Yingbo Fan, Hui Liu",
+      "venue": "Remote Sensing, 16(1): 97",
+      "doi": "10.3390/rs16010097",
+      "url": "https://doi.org/10.3390/rs16010097",
+      "firstAuthor": false,
+      "selected": false,
+      "tags": ["点云", "场景分割", "基础模型"]
+    },
+    {
+      "year": 2023,
+      "title": "LMFD: Lightweight Multi-Feature Descriptors for Image Stitching",
+      "authors": "Yingbo Fan, Shanjun Mao, Mei Li, Jitong Kang, Ben Li",
+      "venue": "Scientific Reports, 13: 21162",
+      "doi": "10.1038/s41598-023-48432-7",
+      "url": "https://doi.org/10.1038/s41598-023-48432-7",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/lmfd.webp",
+      "imageAlt": "LMFD 在平行视角与旋转视角下进行特征点匹配的论文原图。",
+      "tags": ["局部特征", "图像拼接", "高效视觉"],
+      "summary": "面向旋转、噪声与硬件部署约束设计的轻量化二值多特征描述子。"
+    },
+    {
+      "year": 2021,
+      "title": "HFPQ: Deep Neural Network Compression by Hardware-Friendly Pruning-Quantization",
+      "authors": "Yingbo Fan, Wei Pang, Shengli Lu",
+      "venue": "Applied Intelligence, 51(10): 7016-7028",
+      "doi": "10.1007/s10489-020-01968-x",
+      "url": "https://doi.org/10.1007/s10489-020-01968-x",
+      "firstAuthor": true,
+      "selected": true,
+      "image": "/assets/hfpq.webp",
+      "imageAlt": "展示逐层通道剪枝、重训练与二次幂量化流程的 HFPQ 论文原图。",
+      "tags": ["模型压缩", "网络剪枝", "模型量化"],
+      "summary": "结合结构化剪枝与二次幂量化的硬件友好型神经网络压缩框架。"
+    }
+  ],
+  "projects": [
+    {
+      "period": "2025-2030",
+      "title": "透明矿山地质大模型与云平台",
+      "program": "国家科技重大专项",
+      "role": "科研骨干",
+      "description": "参与异构视频流、三维空间数据、场景重建与多模态融合等智能处理研究。"
+    },
+    {
+      "period": "2024-2026",
+      "title": "面向智能综采工作面的矢量空间视频流技术",
+      "program": "科技支撑项目",
+      "role": "科研骨干",
+      "description": "研究全景视频流、空间映射与智能综采平台中的实时视觉交互。"
+    },
+    {
+      "period": "2023-2026",
+      "title": "深海多金属结核数字孪生矿区与决策系统",
+      "program": "国家重点研发计划",
+      "role": "项目参与人",
+      "description": "参与面向深海采矿环境的水下场景重建与数字孪生技术研究。"
+    },
+    {
+      "period": "2022-2025",
+      "title": "煤矿灾害监测与决策数字孪生关键技术",
+      "program": "国家重点研发计划",
+      "role": "项目参与人",
+      "description": "研究深度信息增强与局部三维重建，提升数字孪生场景的几何保真度。"
+    },
+    {
+      "period": "2020-2023",
+      "title": "大型矿山巷道机器人高精度感知与数字孪生系统",
+      "program": "国家重点研发计划",
+      "role": "项目参与人",
+      "description": "研究面向智能巷道系统的多源感知、空间理解与三维数字孪生构建。"
+    }
+  ],
+  "patents": [
+    {"year": 2025, "title": "基于视觉信息对处理成果的多维码智能解析方法和系统", "country": "中国", "number": "ZL 2024 1 1409062.8"},
+    {"year": 2025, "title": "一种地理空间到高精度数字空间的设备管控系统", "country": "中国", "number": "ZL 2023 1 1396230.X"},
+    {"year": 2024, "title": "一种通用人工时空智能大模型的构建方法", "country": "中国", "number": "ZL 2024 1 1433513.1"},
+    {"year": 2024, "title": "基于可变形网格和宽度残差网络的图像矩形化方法和装置", "country": "中国", "number": "ZL 2024 1 0222860.3"},
+    {"year": 2024, "title": "受限空间内矢量空间搭建与图像融合建模的方法和装置", "country": "中国", "number": "ZL 2023 1 1577506.4"},
+    {"year": 2024, "title": "一种基于时空信息对的人工智能系统", "country": "中国", "number": "ZL 2024 1 0643385.7"},
+    {"year": 2024, "title": "一种面向受限空间的多视角几何场景建立方法和装置", "country": "中国", "number": "ZL 2023 1 1058030.3"},
+    {"year": 2023, "title": "一种真实地理空间场景实时构建方法和实时构建装置", "country": "中国", "number": "ZL 2022 1 0499659.0"},
+    {"year": 2024, "title": "基于多重特征描述符的图像特征匹配方法和装置", "country": "中国", "number": "ZL 2023 1 0841374.5"},
+    {"year": 2023, "title": "真实地理空间场景实时构建方法和装置", "country": "美国", "number": "US 11,836,878 B2"},
+    {"year": 2024, "title": "真实地理空间场景实时构建方法和装置", "country": "俄罗斯", "number": "RU 2815084"},
+    {"year": 2024, "title": "真实地理空间场景实时构建方法和装置", "country": "加拿大", "number": "CA 3199062"},
+    {"year": 2023, "title": "真实地理空间场景实时构建方法和装置", "country": "澳大利亚", "number": "AU 2023202859"},
+    {"year": 2025, "title": "基于时空信息对的人工智能系统", "country": "俄罗斯", "number": "RU 2842579"},
+    {"year": 2023, "title": "一种基于 Adaboost 算法的人脸检测方法", "country": "中国", "number": "ZL 2019 1 1052238.6"},
+    {"year": 2021, "title": "一种基于幂指数量化的深度神经网络硬件加速器", "country": "中国", "number": "ZL 2019 1 1436775.1"}
+  ],
+  "education": [
+    {"period": "2021-2025", "degree": "地图学与地理信息系统 博士", "institution": "北京大学"},
+    {"period": "2018-2021", "degree": "计算机科学与技术 硕士", "institution": "东南大学"},
+    {"period": "2014-2018", "degree": "电气工程及其自动化 学士", "institution": "电子科技大学"}
+  ],
+  "experience": [
+    {"period": "2026-至今", "role": "博士后研究人员", "institution": "北京大学"},
+    {"period": "2025-2026", "role": "博士后入站准备与项目研发", "institution": "北京大学"},
+    {"period": "2016", "role": "访问研究人员", "institution": "香港理工大学"}
+  ],
+  "awards": [
+    {"year": "2024", "title": "北京大学廖凯原奖学金"},
+    {"year": "2024", "title": "北京大学学术创新奖"},
+    {"year": "2023", "title": "北京大学社会实践优秀奖"},
+    {"year": "", "title": "全国虚拟地理环境大会优秀青年论文奖"},
+    {"year": "2021", "title": "国际地理信息科学研究生论坛优秀报告奖"}
+  ]
+}
