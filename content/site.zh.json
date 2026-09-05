@@ -7,8 +7,8 @@
     "affiliation": "北京大学地球与空间科学学院",
     "location": "中国·北京",
     "email": "ybfan@pku.edu.cn",
-    "tagline": "面向复杂空间理解、预测与行动的多模态智能。",
-    "mission": "我致力于研究融合视觉感知、三维几何、语言与动态建模的多模态空间智能，重点关注高效世界模型与具身决策，并以智能矿山作为连接前沿方法与复杂真实世界的重要研究场景。",
+    "tagline": "面向物理世界感知、预测与行动的多模态空间智能。",
+    "mission": "我研究使具身系统能够感知复杂环境、预测空间动态并可靠行动的多模态空间智能，重点连接全景与三维感知、高效世界模型，以及面向智能矿山的真实场景部署。",
     "description": "樊迎博的个人学术主页，研究方向包括多模态空间智能、世界模型与智能矿山。",
     "publicationsDescription": "樊迎博在多模态空间智能、计算机视觉、高效模型与智能矿山方向的论文成果。",
     "projectsDescription": "樊迎博在空间智能、世界模型与智能矿山方向的科研项目。",
@@ -45,12 +45,12 @@
   "stats": [
     {
       "value": "8",
-      "label": "SCI 论文",
+      "label": "同行评议期刊论文",
       "detail": "共发表论文 9 篇"
     },
     {
       "value": "5",
-      "label": "第一作者 SCI 论文",
+      "label": "第一作者论文",
       "detail": "计算机视觉与人工智能"
     },
     {
@@ -90,13 +90,13 @@
       "category": "多模态空间智能",
       "title": "高效多视角具身推理",
       "subtitle": "受限计算条件下的几何感知、推理与行动",
-      "status": "在研方向",
+      "status": "研究主题",
       "image": "/assets/frontier-embodied-spatial.webp",
       "imageFit": "cover",
       "alt": "几何感知的多视角感知、推理与具身行动概念图。",
       "description": "研究具身智能体如何融合互补视觉观测、空间结构与语言信息，同时保留对可靠行动最关键的证据。",
       "highlights": ["多视角空间定位", "高效多模态推理", "感知—行动对齐"],
-      "note": "目前仅展示研究思想，相关稿件公开后再补充具体信息。",
+      "note": "",
       "links": []
     },
     {
@@ -104,13 +104,13 @@
       "category": "世界模型",
       "title": "高效预测型世界模型",
       "subtitle": "以更低推理开销保持预测与规划能力",
-      "status": "在研方向",
+      "status": "研究主题",
       "image": "/assets/frontier-world-models.webp",
       "imageFit": "cover",
       "alt": "以紧凑预测表征支持想象与规划的世界模型概念图。",
       "description": "从第一性原理研究世界模型，在降低推理与部署成本的同时，尽可能保持有效的预测和规划能力。",
       "highlights": ["紧凑预测表征", "面向规划的效率", "部署导向的评估"],
-      "note": "本卡片展示持续推进的研究议程，而非已发表成果。",
+      "note": "",
       "links": []
     },
     {
@@ -118,21 +118,59 @@
       "category": "几何感知的空间理解",
       "title": "基础模型驱动的全景几何感知",
       "subtitle": "面向 360° 视觉的几何一致空间理解",
-      "status": "在研方向",
+      "status": "研究主题",
       "image": "/assets/frontier-panoramic-geometry.webp",
       "imageFit": "cover",
       "alt": "观测球面上的全景几何与空间感知概念图。",
       "description": "探索如何使预训练视觉模型适应全景感知，同时尊重球面几何、空间连续性与视点一致性。",
       "highlights": ["全景场景几何", "基础模型适配", "空间一致感知"],
-      "note": "相关稿件尚未公开，目前仅展示研究主题。",
+      "note": "",
       "links": []
     }
   ],
+  "contributions": [
+    {
+      "index": "01",
+      "label": "高效视觉计算",
+      "title": "面向受限部署环境的高效模型",
+      "description": "围绕结构化剪枝、量化与轻量感知形成持续研究积累，将算法效率与可部署计算机视觉系统相连接。",
+      "image": "/assets/hfpq.webp",
+      "imageAlt": "HFPQ 结构化剪枝、重训练与硬件友好量化方法图。",
+      "evidence": [
+        {"label": "HFPQ · Applied Intelligence", "url": "https://doi.org/10.1007/s10489-020-01968-x"},
+        {"label": "CM-YOLOv8 · Sensors", "url": "https://doi.org/10.3390/s24061866"}
+      ]
+    },
+    {
+      "index": "02",
+      "label": "鲁棒视觉感知",
+      "title": "面向几何变化与复杂环境的可靠感知",
+      "description": "研究旋转、噪声、雾霾、低照度等非理想条件下的鲁棒局部表征与视觉恢复，强调真实环境中的稳定性。",
+      "image": "/assets/lmfd.webp",
+      "imageAlt": "LMFD 在平行视角与旋转视角下的特征匹配结果。",
+      "evidence": [
+        {"label": "LMFD · Scientific Reports", "url": "https://doi.org/10.1038/s41598-023-48432-7"},
+        {"label": "自适应去雾 · PLOS ONE", "url": "https://doi.org/10.1371/journal.pone.0334251"}
+      ]
+    },
+    {
+      "index": "03",
+      "label": "几何空间建模",
+      "title": "从图像几何走向结构化空间理解",
+      "description": "覆盖图像拼接、可变形几何校正、点云感知与受限空间建模，为多模态空间智能建立几何基础。",
+      "image": "/assets/rectification.webp",
+      "imageAlt": "不规则拼接图像几何校正方法的定性对比结果。",
+      "evidence": [
+        {"label": "图像几何校正 · Applied Sciences", "url": "https://doi.org/10.3390/app14072821"},
+        {"label": "三维巷道感知 · Remote Sensing", "url": "https://doi.org/10.3390/rs16010097"}
+      ]
+    }
+  ],
   "news": [
-    {"date": "2026 年 9 月", "text": "上线中英双语学术主页，并将研究主线聚焦为多模态空间智能、世界模型与智能矿山。"},
-    {"date": "2026 年", "text": "持续推进面向具身智能的高效多模态空间推理研究。"},
-    {"date": "2026 年", "text": "拓展全景几何、预测型世界模型与真实场景部署之间的研究联系。"},
-    {"date": "2025 年 11 月", "text": "煤矿井下图像自适应多通道去雾论文发表于 PLOS ONE。"}
+    {"date": "2025 年", "text": "参与国家科技重大专项“透明矿山地质基础模型与云平台”研究。"},
+    {"date": "2025 年 11 月", "text": "煤矿井下图像自适应多通道去雾论文发表于 PLOS ONE。"},
+    {"date": "2024 年", "text": "获北京大学廖凯原奖学金和学术优秀奖。"},
+    {"date": "2024 年", "text": "以第一作者发表煤矿轻量化视觉感知与拼接图像几何校正研究。"}
   ],
   "publications": [
     {

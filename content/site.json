@@ -7,8 +7,8 @@
     "affiliation": "School of Earth and Space Sciences, Peking University",
     "location": "Beijing, China",
     "email": "ybfan@pku.edu.cn",
-    "tagline": "Multimodal intelligence for understanding, predicting, and acting in complex spaces.",
-    "mission": "I develop multimodal spatial intelligence that integrates visual perception, 3D geometry, language, and dynamics. My research focuses on efficient world models and grounded decision-making, with intelligent mining as a defining real-world frontier.",
+    "tagline": "Multimodal spatial intelligence for perceiving, predicting, and acting in the physical world.",
+    "mission": "I develop multimodal spatial intelligence that enables embodied systems to perceive complex environments, predict their dynamics, and act reliably. My research connects panoramic and 3D perception, efficient world models, and real-world deployment in intelligent mining.",
     "description": "Academic homepage of Yingbo Fan, a researcher in multimodal spatial intelligence, world models, and intelligent mining at Peking University.",
     "publicationsDescription": "Publications by Yingbo Fan in multimodal spatial intelligence, computer vision, efficient models, and intelligent mining.",
     "projectsDescription": "Research projects by Yingbo Fan in spatial intelligence, world models, and intelligent mining.",
@@ -45,12 +45,12 @@
   "stats": [
     {
       "value": "8",
-      "label": "SCI papers",
+      "label": "Peer-reviewed journal articles",
       "detail": "9 publications in total"
     },
     {
       "value": "5",
-      "label": "First-author SCI papers",
+      "label": "First-author publications",
       "detail": "Computer vision and AI"
     },
     {
@@ -90,13 +90,13 @@
       "category": "Multimodal Spatial Intelligence",
       "title": "Efficient Multiview Embodied Reasoning",
       "subtitle": "Geometry-aware perception and action under constrained computation",
-      "status": "Active research direction",
+      "status": "Research theme",
       "image": "/assets/frontier-embodied-spatial.webp",
       "imageFit": "cover",
       "alt": "Concept illustration of geometry-aware multiview perception, reasoning, and embodied action.",
       "description": "Investigating how embodied agents can integrate complementary visual observations, spatial structure, and language while retaining the evidence most relevant to reliable action.",
       "highlights": ["Multiview spatial grounding", "Efficient multimodal reasoning", "Perception-to-action alignment"],
-      "note": "This card presents the research theme only; manuscript-specific information will be added after public release.",
+      "note": "",
       "links": []
     },
     {
@@ -104,13 +104,13 @@
       "category": "World Models",
       "title": "Efficient Predictive World Models",
       "subtitle": "Planning-capable representations with lower inference cost",
-      "status": "Active research direction",
+      "status": "Research theme",
       "image": "/assets/frontier-world-models.webp",
       "imageFit": "cover",
       "alt": "Concept illustration of compact predictive models supporting imagination and planning.",
       "description": "Studying world models from first principles, with the goal of preserving useful predictive and planning capabilities while reducing inference and deployment cost.",
       "highlights": ["Compact predictive representations", "Planning-oriented efficiency", "Deployment-aware evaluation"],
-      "note": "This card presents an ongoing research agenda rather than a published result.",
+      "note": "",
       "links": []
     },
     {
@@ -118,21 +118,59 @@
       "category": "Geometry-Aware Spatial Perception",
       "title": "Foundation-Model-Based Panoramic Geometry",
       "subtitle": "Geometrically coherent spatial perception for 360-degree vision",
-      "status": "Active research direction",
+      "status": "Research theme",
       "image": "/assets/frontier-panoramic-geometry.webp",
       "imageFit": "cover",
       "alt": "Concept illustration of panoramic geometry and spatial perception on the viewing sphere.",
       "description": "Exploring how pretrained visual models can be adapted to panoramic perception while respecting spherical geometry, spatial continuity, and viewpoint consistency.",
       "highlights": ["Panoramic scene geometry", "Foundation-model adaptation", "Spatially coherent perception"],
-      "note": "Only the research theme is shown while related manuscripts remain non-public.",
+      "note": "",
       "links": []
     }
   ],
+  "contributions": [
+    {
+      "index": "01",
+      "label": "Efficient Visual Computing",
+      "title": "Models designed for constrained deployment",
+      "description": "A sustained line of work on structured pruning, quantization, and lightweight perception, connecting algorithmic efficiency with deployable computer-vision systems.",
+      "image": "/assets/hfpq.webp",
+      "imageAlt": "HFPQ overview showing structured pruning, retraining, and hardware-friendly quantization.",
+      "evidence": [
+        {"label": "HFPQ · Applied Intelligence", "url": "https://doi.org/10.1007/s10489-020-01968-x"},
+        {"label": "CM-YOLOv8 · Sensors", "url": "https://doi.org/10.3390/s24061866"}
+      ]
+    },
+    {
+      "index": "02",
+      "label": "Robust Visual Perception",
+      "title": "Reliable perception under geometric and environmental variation",
+      "description": "Research on robust local representation and visual restoration for rotation, noise, haze, low illumination, and other challenges encountered outside curated benchmarks.",
+      "image": "/assets/lmfd.webp",
+      "imageAlt": "LMFD feature matching results under parallel and rotated views.",
+      "evidence": [
+        {"label": "LMFD · Scientific Reports", "url": "https://doi.org/10.1038/s41598-023-48432-7"},
+        {"label": "Adaptive Dehazing · PLOS ONE", "url": "https://doi.org/10.1371/journal.pone.0334251"}
+      ]
+    },
+    {
+      "index": "03",
+      "label": "Geometric Spatial Modeling",
+      "title": "From image geometry to structured spatial understanding",
+      "description": "Work spanning image stitching, deformable geometric rectification, point-cloud perception, and constrained-space modeling as foundations for spatial intelligence.",
+      "image": "/assets/rectification.webp",
+      "imageAlt": "Qualitative comparison of geometric rectification for irregular stitched images.",
+      "evidence": [
+        {"label": "Image Rectification · Applied Sciences", "url": "https://doi.org/10.3390/app14072821"},
+        {"label": "3D Tunnel Perception · Remote Sensing", "url": "https://doi.org/10.3390/rs16010097"}
+      ]
+    }
+  ],
   "news": [
-    {"date": "Sep. 2026", "text": "Launched the bilingual academic homepage and consolidated the research agenda around multimodal spatial intelligence, world models, and intelligent mining."},
-    {"date": "2026", "text": "Advancing research on efficient multimodal spatial reasoning for embodied intelligence."},
-    {"date": "2026", "text": "Expanding a research agenda connecting panoramic geometry, predictive world models, and real-world deployment."},
-    {"date": "Nov. 2025", "text": "Published Adaptive Multi-Channel Dehazing for Enhanced Visibility in Underground Coal Mine Images in PLOS ONE."}
+    {"date": "2025", "text": "Joined the Transparent Mine Geological Foundation Model and Cloud Platform, a National Science and Technology Major Project."},
+    {"date": "Nov. 2025", "text": "Published Adaptive Multi-Channel Dehazing for Enhanced Visibility in Underground Coal Mine Images in PLOS ONE."},
+    {"date": "2024", "text": "Received the Liao Kaiyuan Scholarship and the Academic Excellence Award at Peking University."},
+    {"date": "2024", "text": "Published first-author work on lightweight coal-mine perception and geometric rectification of stitched imagery."}
   ],
   "publications": [
     {

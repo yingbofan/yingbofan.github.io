@@ -33,13 +33,17 @@ const ui = {
     lastUpdated: 'Last updated September 2026', academicGlance: 'Academic output at a glance', downloadCv: 'Download CV',
     researchVision: 'Research vision', researchArcTitle: 'Understand. Predict. Act.',
     researchIntro: 'My research asks a unified question: how can an intelligent system build a multimodal model of space, anticipate how that world will evolve, and act reliably within it? I approach this through representation, prediction, and deployment.',
-    currentAgenda: 'Current agenda', researchFrontiers: 'Research frontiers', allProjects: 'All projects →',
+    currentAgenda: 'Current research', researchFrontiers: 'Research agenda', allProjects: 'All projects →',
+    agendaIntro: 'Ongoing work is presented here at the level of research themes; manuscript-specific details will be added after public release.',
+    contributionKicker: 'Established foundations', selectedContributions: 'Selected contributions',
+    contributionIntro: 'Peer-reviewed work that forms the technical foundation for my current research agenda.',
     researchOutput: 'Research output', selectedPublications: 'Selected publications', fullPublicationList: 'Full publication list →',
     publicationsIntro: 'Foundational work in robust perception, efficient models, spatial vision, and intelligent mining.',
     realWorldFrontier: 'Real-world frontier', miningTitle: 'Intelligent mining in complex physical worlds',
     miningCopy: 'Mines are large-scale, dynamic, and partially observable 3D environments where perception, prediction, and action must remain reliable under dust, low illumination, occlusion, and constrained computation. I use this frontier to study deployable multimodal intelligence, panoramic sensing, 3D digital twins, and decision support.',
     exploreMining: 'Explore intelligent mining research →', researchAtScale: 'Research at scale', selectedPrograms: 'Selected programs', viewAllProjects: 'View all projects →',
-    recentUpdates: 'Recent updates', latestNews: 'Latest news', newsIntro: 'Selected milestones from current research and publication activity.',
+    recognitionKicker: 'Academic recognition', selectedRecognition: 'Selected recognition',
+    recentUpdates: 'Recent updates', latestNews: 'Latest news', newsIntro: 'Selected research, publication, project, and recognition milestones.',
     background: 'Background', educationExperience: 'Education and experience', fullCv: 'Full CV →',
     firstAuthor: 'First author', coAuthor: 'Co-author', paper: 'Paper ↗',
     publicationsTitle: 'Publications', publicationsPageIntro: 'A complete publication record assembled from the current academic materials. First-author work is marked explicitly.',
@@ -59,13 +63,17 @@ const ui = {
     lastUpdated: '最后更新于 2026 年 9 月', academicGlance: '学术成果概览', downloadCv: '下载 CV',
     researchVision: '研究愿景', researchArcTitle: '理解 · 预测 · 行动',
     researchIntro: '我的研究围绕一个统一问题展开：智能系统如何构建空间的多模态模型，预测世界将如何演化，并在其中可靠行动？我从表征、预测与部署三个层面推进这一研究主线。',
-    currentAgenda: '当前研究议程', researchFrontiers: '研究前沿', allProjects: '全部项目 →',
+    currentAgenda: '当前研究', researchFrontiers: '研究议程', allProjects: '全部项目 →',
+    agendaIntro: '当前仅展示在研工作的研究主题；论文正式公开后再补充具体方法与实验信息。',
+    contributionKicker: '既有研究基础', selectedContributions: '代表性学术贡献',
+    contributionIntro: '经同行评议的研究成果，共同构成当前研究议程的技术基础。',
     researchOutput: '研究成果', selectedPublications: '代表性论文', fullPublicationList: '完整论文列表 →',
     publicationsIntro: '围绕鲁棒感知、高效模型、空间视觉与智能矿山开展的代表性研究。',
     realWorldFrontier: '真实世界前沿', miningTitle: '复杂物理世界中的智能矿山',
     miningCopy: '矿山是大尺度、动态且部分可观测的三维环境，感知、预测与行动必须在粉尘、弱光、遮挡和算力受限条件下保持可靠。我以这一真实世界前沿为牵引，研究可部署的多模态智能、全景感知、三维数字孪生与智能决策。',
     exploreMining: '查看智能矿山研究 →', researchAtScale: '规模化科研', selectedPrograms: '代表性科研项目', viewAllProjects: '查看全部项目 →',
-    recentUpdates: '近期动态', latestNews: '最新进展', newsIntro: '记录近期研究、论文与学术主页的重要进展。',
+    recognitionKicker: '学术认可', selectedRecognition: '代表性荣誉',
+    recentUpdates: '近期动态', latestNews: '最新进展', newsIntro: '记录具有明确学术证据的论文、项目与荣誉进展。',
     background: '学术背景', educationExperience: '教育与工作经历', fullCv: '完整简历 →',
     firstAuthor: '第一作者', coAuthor: '共同作者', paper: '论文 ↗',
     publicationsTitle: '论文成果', publicationsPageIntro: '根据现有学术材料整理的完整论文列表，其中第一作者论文已作明确标注。',
@@ -211,13 +219,26 @@ function featuredRow(item, index) {
   return `<article class="feature-row${index % 2 ? ' feature-row-reverse' : ''}" id="${escapeHtml(item.slug)}">
     <div class="feature-visual${item.imageFit === 'contain' ? ' feature-visual-contain' : ''}"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" loading="lazy"></div>
     <div class="feature-copy">
-      <div class="feature-topline"><span class="research-label">${escapeHtml(item.category)}</span><span class="status-label">${escapeHtml(item.status)}</span></div>
+      <div class="feature-topline"><span class="research-label">${escapeHtml(item.category)}</span></div>
       <h3>${escapeHtml(item.title)}</h3>
       ${item.subtitle ? `<p class="feature-subtitle">${escapeHtml(item.subtitle)}</p>` : ''}
       <p>${escapeHtml(item.description)}</p>
       ${highlights}
       ${links}
       ${item.note ? `<p class="availability-note">${escapeHtml(item.note)}</p>` : ''}
+    </div>
+  </article>`;
+}
+
+function contributionCard(item) {
+  const evidence = item.evidence.map((entry) => `<a class="text-link" href="${escapeHtml(entry.url)}" target="_blank" rel="noreferrer">${escapeHtml(entry.label)} ↗</a>`).join('');
+  return `<article class="contribution-card">
+    <div class="contribution-visual"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt)}" loading="lazy"></div>
+    <div class="contribution-copy">
+      <div class="contribution-heading"><span>${escapeHtml(item.index)}</span><p>${escapeHtml(item.label)}</p></div>
+      <h3>${escapeHtml(item.title)}</h3>
+      <p>${escapeHtml(item.description)}</p>
+      <div class="contribution-evidence">${evidence}</div>
     </div>
   </article>`;
 }
@@ -266,8 +287,15 @@ function homePage() {
     <section class="section section-tint">
       <div class="shell">
         ${sectionHeading(t('currentAgenda'), t('researchFrontiers'), `<a class="section-link" href="${route('/projects/')}">${escapeHtml(t('allProjects'))}</a>`)}
+        <p class="section-intro agenda-intro">${escapeHtml(t('agendaIntro'))}</p>
         <div class="feature-list">${data.featured.map(featuredRow).join('')}</div>
       </div>
+    </section>
+
+    <section class="section shell contributions-section">
+      ${sectionHeading(t('contributionKicker'), t('selectedContributions'))}
+      <p class="section-intro">${escapeHtml(t('contributionIntro'))}</p>
+      <div class="contribution-list">${data.contributions.map(contributionCard).join('')}</div>
     </section>
 
     <section class="section shell research-arc-section">
@@ -300,6 +328,13 @@ function homePage() {
       ${sectionHeading(t('researchAtScale'), t('selectedPrograms'), `<a class="section-link" href="${route('/projects/')}">${escapeHtml(t('viewAllProjects'))}</a>`)}
       <div class="project-preview-grid">
         ${latestProjects.map((project) => `<article><p class="project-period">${escapeHtml(project.period)}</p><h3>${escapeHtml(project.title)}</h3><p class="project-program">${escapeHtml(project.program)}</p><p>${escapeHtml(project.description)}</p></article>`).join('')}
+      </div>
+    </section>
+
+    <section class="section recognition-section">
+      <div class="shell">
+        ${sectionHeading(t('recognitionKicker'), t('selectedRecognition'), `<a class="section-link" href="${route('/cv/#awards')}">${escapeHtml(t('fullCv'))}</a>`)}
+        <div class="recognition-grid">${data.awards.slice(0, 4).map((item) => `<article><p>${escapeHtml(item.year || '—')}</p><h3>${escapeHtml(item.title)}</h3></article>`).join('')}</div>
       </div>
     </section>
 

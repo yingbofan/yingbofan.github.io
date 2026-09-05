@@ -525,8 +525,108 @@ p {
   content: "—";
 }
 
-.news-section {
+.agenda-intro {
+  max-width: 760px;
+}
+
+.contribution-list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.contribution-card {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.3fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding-block: clamp(2rem, 4vw, 3.2rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.contribution-visual {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+}
+
+.contribution-visual img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.contribution-heading {
+  display: flex;
+  gap: 0.9rem;
+  align-items: baseline;
+  margin-bottom: 0.65rem;
+}
+
+.contribution-heading span {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.contribution-heading p {
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contribution-copy h3 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+.contribution-copy > p {
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.contribution-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.recognition-section {
   background: var(--surface-blue);
+}
+
+.recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #bac8d1;
+}
+
+.recognition-grid article {
+  padding: 1.7rem 1.5rem 0 0;
+}
+
+.recognition-grid article + article {
+  padding-left: 1.5rem;
+  border-left: 1px solid #c5d1d8;
+}
+
+.recognition-grid p {
+  margin-bottom: 0.55rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.recognition-grid h3 {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.news-section {
+  background: var(--surface);
 }
 
 .news-list {
@@ -1131,11 +1231,31 @@ p {
 
   .research-arc,
   .feature-row,
+  .contribution-card,
   .publication-card,
   .applied-grid,
   .system-story,
   .cv-layout {
     grid-template-columns: 1fr;
+  }
+
+  .contribution-card {
+    gap: 1.35rem;
+  }
+
+  .contribution-visual {
+    width: min(100%, 420px);
+  }
+
+  .recognition-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recognition-grid article,
+  .recognition-grid article + article {
+    padding: 1.3rem 1rem 1.3rem 0;
+    border-top: 1px solid #c5d1d8;
+    border-left: 0;
   }
 
   .research-arc article + article {
@@ -1262,6 +1382,15 @@ p {
 
   .metric-value {
     font-size: 3rem;
+  }
+
+  .recognition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recognition-grid article,
+  .recognition-grid article + article {
+    padding-right: 0;
   }
 
   .feature-topline {
