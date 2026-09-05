@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">Publication placeholder</title>
-  <desc id="desc">Abstract geometric publication placeholder.</desc>
-  <rect width="800" height="500" fill="#eef2f4"/>
-  <rect x="120" y="88" width="560" height="324" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>
-  <path d="M170 155h310M170 198h440M170 241h380M170 284h440M170 327h270" stroke="#7b878e" stroke-width="9"/>
-  <rect x="532" y="132" width="92" height="92" fill="#dfe9ef" stroke="#1f5b83" stroke-width="3"/>
-  <circle cx="578" cy="178" r="21" fill="#d9a441"/>
-</svg>

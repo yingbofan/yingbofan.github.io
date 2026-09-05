@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">One Sphere, Many Charts concept visual</title>
+  <title id="title">Panoramic spatial perception concept visual</title>
   <desc id="desc">A spherical panorama is represented by multiple local charts linked through consistency constraints.</desc>
   <rect width="800" height="500" fill="#eef2f4"/>
   <circle cx="330" cy="250" r="153" fill="#dfe9ef" stroke="#1f5b83" stroke-width="3"/>

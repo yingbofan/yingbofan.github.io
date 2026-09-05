@@ -6,20 +6,26 @@
 
 1. 修改 `content/site.json` 中的英文内容，并在 `content/site.zh.json` 中同步中文内容。
 2. 将新图片放入 `public/assets/`，并在数据中填写 `/assets/文件名`。
-3. 在项目目录运行：
+3. 如果论文、项目、履历、荣誉或专利有变化，先重新生成可下载 CV：
+
+   ```bash
+   npm run build:cv
+   ```
+
+4. 在项目目录运行：
 
    ```bash
    npm run build
    npm run validate
    ```
 
-4. 本地预览：
+5. 本地预览：
 
    ```bash
    npm run serve
    ```
 
-5. 浏览器访问 `http://localhost:4173`。确认无误后提交并推送到 GitHub，GitHub Pages 会自动发布。
+6. 浏览器访问 `http://localhost:4173`。确认无误后提交并推送到 GitHub，GitHub Pages 会自动发布。
 
 ## 替换个人照片
 
@@ -63,7 +69,9 @@
 ]
 ```
 
-正式方法图可直接覆盖当前同名 SVG，也可以上传新的 JPG、PNG、WebP 或 SVG，并修改 `image` 路径。推荐横向图片，比例约为 16:10。
+未发表工作目前只使用概念图并展示研究思想，不公开论文原图、题目、方法名、投稿状态或可反向识别的实验细节。论文正式公开后，可以上传 JPG、PNG、WebP 或 SVG teaser，并修改 `image` 路径；横向论文图推荐使用 `"imageFit": "contain"`，以避免裁掉文字和结构。
+
+评审专用且明确禁止公开传播的匿名稿件不得放入 `public/`，也不得在主页公开其原图、实验数字或投稿会议信息。
 
 ## 更新学术主页入口
 
@@ -85,6 +93,6 @@ Google Scholar、ORCID、Semantic Scholar 和邮箱位于 `site.profiles`。目�
 - 替换正式个人照片。
 - 确认当前英文职务和院系写法。
 - 将 Scholar 与 Semantic Scholar 改为个人主页直链。
-- 为 CARVE-VLA、One Sphere, Many Charts 等公开工作补充论文、项目、代码和演示链接。
+- 仅在相关论文正式公开后，再补充准确的论文题目、项目页、代码和演示链接。
 - 用公开版本的论文代表图替换概念图。
-- 提供正式 CV PDF 后，在导航和 Hero 中增加下载入口。
+- 修改论文、项目、履历、荣誉或专利后，运行 `npm run build:cv` 同步更新下载版 CV。

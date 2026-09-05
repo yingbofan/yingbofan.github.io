@@ -14,6 +14,7 @@
     "projectsDescription": "樊迎博在空间智能、世界模型与智能矿山方向的科研项目。",
     "cvDescription": "樊迎博，北京大学博士后研究人员个人简历。",
     "keywords": ["多模态空间智能", "世界模型", "智能矿山"],
+    "cvUrl": "/assets/yingbo-fan-cv.pdf",
     "profiles": [
       {
         "label": "Google Scholar",
@@ -22,7 +23,13 @@
       },
       {
         "label": "ORCID",
-        "url": "https://orcid.org/0009-0009-9276-9549"
+        "url": "https://orcid.org/0009-0009-9276-9549",
+        "sameAs": true
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/yingbofan",
+        "sameAs": true
       },
       {
         "label": "Semantic Scholar",
@@ -79,36 +86,53 @@
   ],
   "featured": [
     {
-      "slug": "carve-vla",
+      "slug": "embodied-spatial-reasoning",
       "category": "多模态空间智能",
-      "title": "CARVE-VLA",
-      "status": "旗舰研究方向",
-      "image": "/assets/carve-vla.svg",
-      "alt": "CARVE-VLA 概念图，展示视觉观测、语言、具身智能体与动作轨迹之间的联系。",
-      "description": "面向视觉-语言-动作模型的空间智能研究框架，将多模态推理建立在空间结构之上，连接视觉观测、语言、世界状态与具身行动。",
+      "title": "高效多视角具身推理",
+      "subtitle": "受限计算条件下的几何感知、推理与行动",
+      "status": "在研方向",
+      "image": "/assets/embodied-spatial-reasoning.svg",
+      "imageFit": "contain",
+      "alt": "几何感知的多视角感知、推理与具身行动概念图。",
+      "description": "研究具身智能体如何融合互补视觉观测、空间结构与语言信息，同时保留对可靠行动最关键的证据。",
+      "highlights": ["多视角空间定位", "高效多模态推理", "感知—行动对齐"],
+      "note": "目前仅展示研究思想，相关稿件公开后再补充具体信息。",
       "links": []
     },
     {
       "slug": "lightweight-world-models",
       "category": "世界模型",
-      "title": "轻量化世界模型",
-      "status": "核心研究方向",
+      "title": "高效预测型世界模型",
+      "subtitle": "以更低推理开销保持预测与规划能力",
+      "status": "在研方向",
       "image": "/assets/world-models.svg",
-      "alt": "紧凑潜在状态支持预测与规划的概念图。",
-      "description": "从第一性原理探索紧凑预测模型，在降低推理开销的同时保持环境想象与规划能力。",
+      "imageFit": "contain",
+      "alt": "以紧凑预测表征支持想象与规划的世界模型概念图。",
+      "description": "从第一性原理研究世界模型，在降低推理与部署成本的同时，尽可能保持有效的预测和规划能力。",
+      "highlights": ["紧凑预测表征", "面向规划的效率", "部署导向的评估"],
+      "note": "本卡片展示持续推进的研究议程，而非已发表成果。",
       "links": []
     },
     {
-      "slug": "one-sphere-many-charts",
+      "slug": "panoramic-spatial-perception",
       "category": "几何感知的空间理解",
-      "title": "一球多图",
-      "subtitle": "基于冻结基础模型的群一致性全景深度估计",
-      "status": "正在开展",
-      "image": "/assets/one-sphere.svg",
-      "alt": "将球面分解为多个参数化图表进行全景深度估计的概念图。",
-      "description": "通过图表化球面表征和群一致性约束，将冻结深度基础模型迁移到全景深度估计任务。",
+      "title": "基础模型驱动的全景几何感知",
+      "subtitle": "面向 360° 视觉的几何一致空间理解",
+      "status": "在研方向",
+      "image": "/assets/panoramic-spatial-perception.svg",
+      "imageFit": "contain",
+      "alt": "观测球面上的全景几何与空间感知概念图。",
+      "description": "探索如何使预训练视觉模型适应全景感知，同时尊重球面几何、空间连续性与视点一致性。",
+      "highlights": ["全景场景几何", "基础模型适配", "空间一致感知"],
+      "note": "相关稿件尚未公开，目前仅展示研究主题。",
       "links": []
     }
+  ],
+  "news": [
+    {"date": "2026 年 9 月", "text": "上线中英双语学术主页，并将研究主线聚焦为多模态空间智能、世界模型与智能矿山。"},
+    {"date": "2026 年", "text": "持续推进面向具身智能的高效多模态空间推理研究。"},
+    {"date": "2026 年", "text": "拓展全景几何、预测型世界模型与真实场景部署之间的研究联系。"},
+    {"date": "2025 年 11 月", "text": "煤矿井下图像自适应多通道去雾论文发表于 PLOS ONE。"}
   ],
   "publications": [
     {
@@ -286,7 +310,6 @@
   ],
   "experience": [
     {"period": "2026-至今", "role": "博士后研究人员", "institution": "北京大学"},
-    {"period": "2025-2026", "role": "博士后入站准备与项目研发", "institution": "北京大学"},
     {"period": "2016", "role": "访问研究人员", "institution": "香港理工大学"}
   ],
   "awards": [

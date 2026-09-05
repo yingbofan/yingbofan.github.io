@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
-  <title id="title">CARVE-VLA concept visual</title>
+  <title id="title">Embodied spatial reasoning concept visual</title>
   <desc id="desc">Visual observations and language instructions flow into an embodied agent that produces a spatial action trajectory.</desc>
   <rect width="800" height="500" fill="#eef2f4"/>
   <rect x="55" y="70" width="205" height="135" fill="#ffffff" stroke="#aab5bc" stroke-width="2"/>

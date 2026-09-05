@@ -14,6 +14,7 @@
     "projectsDescription": "Research projects by Yingbo Fan in spatial intelligence, world models, and intelligent mining.",
     "cvDescription": "Curriculum vitae of Yingbo Fan, Peking University.",
     "keywords": ["Multimodal Spatial Intelligence", "World Models", "Intelligent Mining"],
+    "cvUrl": "/assets/yingbo-fan-cv.pdf",
     "profiles": [
       {
         "label": "Google Scholar",
@@ -22,7 +23,13 @@
       },
       {
         "label": "ORCID",
-        "url": "https://orcid.org/0009-0009-9276-9549"
+        "url": "https://orcid.org/0009-0009-9276-9549",
+        "sameAs": true
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/yingbofan",
+        "sameAs": true
       },
       {
         "label": "Semantic Scholar",
@@ -79,36 +86,53 @@
   ],
   "featured": [
     {
-      "slug": "carve-vla",
+      "slug": "embodied-spatial-reasoning",
       "category": "Multimodal Spatial Intelligence",
-      "title": "CARVE-VLA",
-      "status": "Flagship research direction",
-      "image": "/assets/carve-vla.svg",
-      "alt": "Concept illustration for CARVE-VLA showing visual observations, language, an embodied agent, and action trajectories.",
-      "description": "A vision-language-action framework that grounds multimodal reasoning in spatial structure, connecting visual observations, language, world state, and action.",
+      "title": "Efficient Multiview Embodied Reasoning",
+      "subtitle": "Geometry-aware perception and action under constrained computation",
+      "status": "Active research direction",
+      "image": "/assets/embodied-spatial-reasoning.svg",
+      "imageFit": "contain",
+      "alt": "Concept illustration of geometry-aware multiview perception, reasoning, and embodied action.",
+      "description": "Investigating how embodied agents can integrate complementary visual observations, spatial structure, and language while retaining the evidence most relevant to reliable action.",
+      "highlights": ["Multiview spatial grounding", "Efficient multimodal reasoning", "Perception-to-action alignment"],
+      "note": "This card presents the research theme only; manuscript-specific information will be added after public release.",
       "links": []
     },
     {
       "slug": "lightweight-world-models",
       "category": "World Models",
-      "title": "Lightweight World Models",
-      "status": "Core research direction",
+      "title": "Efficient Predictive World Models",
+      "subtitle": "Planning-capable representations with lower inference cost",
+      "status": "Active research direction",
       "image": "/assets/world-models.svg",
-      "alt": "Concept illustration of compact latent states supporting prediction and planning.",
-      "description": "A first-principles investigation of compact predictive models that preserve imagination and planning capability while reducing inference cost.",
+      "imageFit": "contain",
+      "alt": "Concept illustration of compact predictive models supporting imagination and planning.",
+      "description": "Studying world models from first principles, with the goal of preserving useful predictive and planning capabilities while reducing inference and deployment cost.",
+      "highlights": ["Compact predictive representations", "Planning-oriented efficiency", "Deployment-aware evaluation"],
+      "note": "This card presents an ongoing research agenda rather than a published result.",
       "links": []
     },
     {
-      "slug": "one-sphere-many-charts",
+      "slug": "panoramic-spatial-perception",
       "category": "Geometry-Aware Spatial Perception",
-      "title": "One Sphere, Many Charts",
-      "subtitle": "Group-Consistent Panoramic Depth from Frozen Foundation Models",
-      "status": "Research in progress",
-      "image": "/assets/one-sphere.svg",
-      "alt": "Concept illustration of a sphere decomposed into multiple charts for panoramic depth estimation.",
-      "description": "A geometry-aware approach that transfers frozen foundation models to panoramic depth estimation through chart-based representations and group consistency.",
+      "title": "Foundation-Model-Based Panoramic Geometry",
+      "subtitle": "Geometrically coherent spatial perception for 360-degree vision",
+      "status": "Active research direction",
+      "image": "/assets/panoramic-spatial-perception.svg",
+      "imageFit": "contain",
+      "alt": "Concept illustration of panoramic geometry and spatial perception on the viewing sphere.",
+      "description": "Exploring how pretrained visual models can be adapted to panoramic perception while respecting spherical geometry, spatial continuity, and viewpoint consistency.",
+      "highlights": ["Panoramic scene geometry", "Foundation-model adaptation", "Spatially coherent perception"],
+      "note": "Only the research theme is shown while related manuscripts remain non-public.",
       "links": []
     }
+  ],
+  "news": [
+    {"date": "Sep. 2026", "text": "Launched the bilingual academic homepage and consolidated the research agenda around multimodal spatial intelligence, world models, and intelligent mining."},
+    {"date": "2026", "text": "Advancing research on efficient multimodal spatial reasoning for embodied intelligence."},
+    {"date": "2026", "text": "Expanding a research agenda connecting panoramic geometry, predictive world models, and real-world deployment."},
+    {"date": "Nov. 2025", "text": "Published Adaptive Multi-Channel Dehazing for Enhanced Visibility in Underground Coal Mine Images in PLOS ONE."}
   ],
   "publications": [
     {
@@ -286,7 +310,6 @@
   ],
   "experience": [
     {"period": "2026–Present", "role": "Postdoctoral Researcher", "institution": "Peking University"},
-    {"period": "2025–2026", "role": "Postdoctoral Research Preparation and Project Development", "institution": "Peking University"},
     {"period": "2016", "role": "Visiting Researcher", "institution": "The Hong Kong Polytechnic University"}
   ],
   "awards": [

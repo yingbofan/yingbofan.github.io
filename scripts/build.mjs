@@ -30,7 +30,7 @@ const ui = {
   en: {
     home: 'Home', publications: 'Publications', projects: 'Projects', cv: 'CV', menu: 'Menu',
     primaryNavigation: 'Primary navigation', skip: 'Skip to content', language: '中文', languageLabel: '切换到中文版',
-    lastUpdated: 'Last updated September 2026', academicGlance: 'Academic output at a glance',
+    lastUpdated: 'Last updated September 2026', academicGlance: 'Academic output at a glance', downloadCv: 'Download CV',
     researchVision: 'Research vision', researchArcTitle: 'Understand. Predict. Act.',
     researchIntro: 'My research asks a unified question: how can an intelligent system build a multimodal model of space, anticipate how that world will evolve, and act reliably within it? I approach this through representation, prediction, and deployment.',
     currentAgenda: 'Current agenda', researchFrontiers: 'Research frontiers', allProjects: 'All projects →',
@@ -39,6 +39,7 @@ const ui = {
     realWorldFrontier: 'Real-world frontier', miningTitle: 'Intelligent mining in complex physical worlds',
     miningCopy: 'Mines are large-scale, dynamic, and partially observable 3D environments where perception, prediction, and action must remain reliable under dust, low illumination, occlusion, and constrained computation. I use this frontier to study deployable multimodal intelligence, panoramic sensing, 3D digital twins, and decision support.',
     exploreMining: 'Explore intelligent mining research →', researchAtScale: 'Research at scale', selectedPrograms: 'Selected programs', viewAllProjects: 'View all projects →',
+    recentUpdates: 'Recent updates', latestNews: 'Latest news', newsIntro: 'Selected milestones from current research and publication activity.',
     background: 'Background', educationExperience: 'Education and experience', fullCv: 'Full CV →',
     firstAuthor: 'First author', coAuthor: 'Co-author', paper: 'Paper ↗',
     publicationsTitle: 'Publications', publicationsPageIntro: 'A complete publication record assembled from the current academic materials. First-author work is marked explicitly.',
@@ -55,7 +56,7 @@ const ui = {
   zh: {
     home: '首页', publications: '论文', projects: '项目', cv: '简历', menu: '菜单',
     primaryNavigation: '主导航', skip: '跳转到主要内容', language: 'EN', languageLabel: 'Switch to English',
-    lastUpdated: '最后更新于 2026 年 9 月', academicGlance: '学术成果概览',
+    lastUpdated: '最后更新于 2026 年 9 月', academicGlance: '学术成果概览', downloadCv: '下载 CV',
     researchVision: '研究愿景', researchArcTitle: '理解 · 预测 · 行动',
     researchIntro: '我的研究围绕一个统一问题展开：智能系统如何构建空间的多模态模型，预测世界将如何演化，并在其中可靠行动？我从表征、预测与部署三个层面推进这一研究主线。',
     currentAgenda: '当前研究议程', researchFrontiers: '研究前沿', allProjects: '全部项目 →',
@@ -64,6 +65,7 @@ const ui = {
     realWorldFrontier: '真实世界前沿', miningTitle: '复杂物理世界中的智能矿山',
     miningCopy: '矿山是大尺度、动态且部分可观测的三维环境，感知、预测与行动必须在粉尘、弱光、遮挡和算力受限条件下保持可靠。我以这一真实世界前沿为牵引，研究可部署的多模态智能、全景感知、三维数字孪生与智能决策。',
     exploreMining: '查看智能矿山研究 →', researchAtScale: '规模化科研', selectedPrograms: '代表性科研项目', viewAllProjects: '查看全部项目 →',
+    recentUpdates: '近期动态', latestNews: '最新进展', newsIntro: '记录近期研究、论文与学术主页的重要进展。',
     background: '学术背景', educationExperience: '教育与工作经历', fullCv: '完整简历 →',
     firstAuthor: '第一作者', coAuthor: '共同作者', paper: '论文 ↗',
     publicationsTitle: '论文成果', publicationsPageIntro: '根据现有学术材料整理的完整论文列表，其中第一作者论文已作明确标注。',
@@ -109,6 +111,7 @@ function header(active = 'home') {
     <header class="site-header">
       <div class="shell nav-shell">
         <a class="site-name" href="${route('/')}" aria-label="${escapeHtml(data.site.name)} ${escapeHtml(t('home'))}">${escapeHtml(data.site.name)}</a>
+        <a class="language-switch language-switch-mobile" href="${alternateRoute(active)}" hreflang="${locale === 'zh' ? 'en' : 'zh-CN'}" aria-label="${escapeHtml(t('languageLabel'))}">${escapeHtml(t('language'))}</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">${escapeHtml(t('menu'))}</button>
         <nav id="primary-nav" class="primary-nav" aria-label="${escapeHtml(t('primaryNavigation'))}">
           ${nav.map(([key, href, label]) => `<a href="${route(href)}"${active === key ? ' aria-current="page"' : ''}>${label}</a>`).join('')}
@@ -140,7 +143,7 @@ function layout({ title, description, active, pathname, content }) {
   const canonical = `${baseUrl}${pathname}`;
   const englishPathname = locale === 'zh' ? pathname.replace(/^\/zh/, '') || '/' : pathname;
   const chinesePathname = locale === 'zh' ? pathname : (pathname === '/' ? '/zh/' : `/zh${pathname}`);
-  const sameAs = datasets.en.site.profiles.filter((item) => item.url.startsWith('http')).map((item) => item.url);
+  const sameAs = datasets.en.site.profiles.filter((item) => item.sameAs).map((item) => item.url);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -150,6 +153,8 @@ function layout({ title, description, active, pathname, content }) {
     affiliation: { '@type': 'CollegeOrUniversity', name: datasets.en.site.institution },
     url: baseUrl,
     email: `mailto:${data.site.email}`,
+    image: `${baseUrl}/assets/yingbo-fan-portrait.webp`,
+    knowsAbout: datasets.en.site.keywords,
     sameAs
   };
   return `<!doctype html>
@@ -163,13 +168,19 @@ function layout({ title, description, active, pathname, content }) {
     <meta property="og:title" content="${escapeHtml(pageTitle)}">
     <meta property="og:description" content="${escapeHtml(description)}">
     <meta property="og:url" content="${canonical}">
-    <meta property="og:image" content="${baseUrl}/assets/og-image.svg">
+    <meta property="og:image" content="${baseUrl}/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(pageTitle)}">
+    <meta name="twitter:description" content="${escapeHtml(description)}">
+    <meta name="twitter:image" content="${baseUrl}/assets/og-image.png">
     <link rel="canonical" href="${canonical}">
     <link rel="alternate" hreflang="en" href="${baseUrl}${englishPathname}">
     <link rel="alternate" hreflang="zh-CN" href="${baseUrl}${chinesePathname}">
     <link rel="alternate" hreflang="x-default" href="${baseUrl}${englishPathname}">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/site.css?v=20260904-bilingual">
+    <link rel="stylesheet" href="/assets/site.css?v=20260905-research-refresh">
     <script type="application/ld+json">${JSON.stringify(jsonLd).replaceAll('<', '\\u003c')}</script>
     <script src="/assets/site.js" defer></script>
     <title>${escapeHtml(pageTitle)}</title>
@@ -192,16 +203,21 @@ function sectionHeading(kicker, title, action = '') {
 
 function featuredRow(item, index) {
   const links = item.links.length
-    ? `<div class="link-row">${item.links.map((link) => `<a class="text-link" href="${escapeHtml(link.url)}">${escapeHtml(link.label)} ↗</a>`).join('')}</div>`
+    ? `<div class="link-row">${item.links.map((link) => `<a class="text-link" href="${escapeHtml(link.url)}"${link.url.startsWith('http') ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(link.label)} ↗</a>`).join('')}</div>`
+    : '';
+  const highlights = item.highlights?.length
+    ? `<ul class="feature-points">${item.highlights.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul>`
     : '';
   return `<article class="feature-row${index % 2 ? ' feature-row-reverse' : ''}" id="${escapeHtml(item.slug)}">
-    <div class="feature-visual"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" loading="lazy"></div>
+    <div class="feature-visual${item.imageFit === 'contain' ? ' feature-visual-contain' : ''}"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" loading="lazy"></div>
     <div class="feature-copy">
       <div class="feature-topline"><span class="research-label">${escapeHtml(item.category)}</span><span class="status-label">${escapeHtml(item.status)}</span></div>
       <h3>${escapeHtml(item.title)}</h3>
       ${item.subtitle ? `<p class="feature-subtitle">${escapeHtml(item.subtitle)}</p>` : ''}
       <p>${escapeHtml(item.description)}</p>
+      ${highlights}
       ${links}
+      ${item.note ? `<p class="availability-note">${escapeHtml(item.note)}</p>` : ''}
     </div>
   </article>`;
 }
@@ -231,7 +247,7 @@ function homePage() {
         <p class="hero-tagline">${escapeHtml(data.site.tagline)}</p>
         <p class="hero-mission">${escapeHtml(data.site.mission)}</p>
         <p class="research-keywords">${data.site.keywords.map(escapeHtml).join(' · ')}</p>
-        <div class="profile-links">${profileLinks()}<a class="text-link" href="${route('/cv/')}">${escapeHtml(t('cv'))} →</a></div>
+        <div class="profile-links">${profileLinks()}<a class="text-link" href="${route('/cv/')}">${escapeHtml(t('cv'))} →</a><a class="button-link" href="${escapeHtml(data.site.cvUrl)}" download>${escapeHtml(t('downloadCv'))} ↓</a></div>
       </div>
       <div class="portrait-wrap">
         <img src="/assets/yingbo-fan-portrait.webp" alt="${escapeHtml(t('portraitAlt'))}" fetchpriority="high" decoding="async">
@@ -247,18 +263,18 @@ function homePage() {
       </div>
     </section>
 
+    <section class="section section-tint">
+      <div class="shell">
+        ${sectionHeading(t('currentAgenda'), t('researchFrontiers'), `<a class="section-link" href="${route('/projects/')}">${escapeHtml(t('allProjects'))}</a>`)}
+        <div class="feature-list">${data.featured.map(featuredRow).join('')}</div>
+      </div>
+    </section>
+
     <section class="section shell research-arc-section">
       ${sectionHeading(t('researchVision'), t('researchArcTitle'))}
       <p class="section-intro">${escapeHtml(t('researchIntro'))}</p>
       <div class="research-arc">
         ${data.researchArc.map((item) => `<article><p class="arc-index">${escapeHtml(item.index)}</p><p class="arc-verb">${escapeHtml(item.verb)}</p><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p></article>`).join('')}
-      </div>
-    </section>
-
-    <section class="section section-tint">
-      <div class="shell">
-        ${sectionHeading(t('currentAgenda'), t('researchFrontiers'), `<a class="section-link" href="${route('/projects/')}">${escapeHtml(t('allProjects'))}</a>`)}
-        <div class="feature-list">${data.featured.map(featuredRow).join('')}</div>
       </div>
     </section>
 
@@ -284,6 +300,14 @@ function homePage() {
       ${sectionHeading(t('researchAtScale'), t('selectedPrograms'), `<a class="section-link" href="${route('/projects/')}">${escapeHtml(t('viewAllProjects'))}</a>`)}
       <div class="project-preview-grid">
         ${latestProjects.map((project) => `<article><p class="project-period">${escapeHtml(project.period)}</p><h3>${escapeHtml(project.title)}</h3><p class="project-program">${escapeHtml(project.program)}</p><p>${escapeHtml(project.description)}</p></article>`).join('')}
+      </div>
+    </section>
+
+    <section class="section news-section">
+      <div class="shell">
+        ${sectionHeading(t('recentUpdates'), t('latestNews'))}
+        <p class="section-intro">${escapeHtml(t('newsIntro'))}</p>
+        <div class="news-list">${data.news.map((item) => `<article><time>${escapeHtml(item.date)}</time><p>${escapeHtml(item.text)}</p></article>`).join('')}</div>
       </div>
     </section>
 
@@ -356,7 +380,7 @@ function cvPage() {
   const content = `
     <section class="page-hero shell cv-hero">
       <div><p class="eyebrow">${escapeHtml(t('curriculumVitae'))}</p><h1>${escapeHtml(data.site.name)}</h1><p>${escapeHtml(data.site.title)}, ${escapeHtml(data.site.affiliation)}</p></div>
-      <div class="cv-contact"><p>${escapeHtml(data.site.email.replace('@', ' [at] '))}</p><p>${escapeHtml(data.site.location)}</p></div>
+      <div class="cv-contact"><p>${escapeHtml(data.site.email.replace('@', ' [at] '))}</p><p>${escapeHtml(data.site.location)}</p><a class="button-link" href="${escapeHtml(data.site.cvUrl)}" download>${escapeHtml(t('downloadCv'))} ↓</a></div>
     </section>
     <section class="page-section shell cv-layout">
       <aside class="cv-sidebar">
