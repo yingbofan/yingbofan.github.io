@@ -9,6 +9,7 @@
     "email": "ybfan@pku.edu.cn",
     "tagline": "Multimodal spatial intelligence for perceiving, predicting, and acting in the physical world.",
     "mission": "I develop multimodal spatial intelligence that enables embodied systems to perceive complex environments, predict their dynamics, and act reliably. My research connects panoramic and 3D perception, efficient world models, and real-world deployment in intelligent mining.",
+    "collaboration": "I welcome research collaborations in multimodal spatial intelligence, efficient world models, embodied AI, and intelligent mining.",
     "description": "Academic homepage of Yingbo Fan, a researcher in multimodal spatial intelligence, world models, and intelligent mining at Peking University.",
     "publicationsDescription": "Publications by Yingbo Fan in multimodal spatial intelligence, computer vision, efficient models, and intelligent mining.",
     "projectsDescription": "Research projects by Yingbo Fan in spatial intelligence, world models, and intelligent mining.",
@@ -16,11 +17,6 @@
     "keywords": ["Multimodal Spatial Intelligence", "World Models", "Intelligent Mining"],
     "cvUrl": "/assets/yingbo-fan-cv.pdf",
     "profiles": [
-      {
-        "label": "Google Scholar",
-        "url": "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yingbo+Fan+Peking+University",
-        "note": "Author search"
-      },
       {
         "label": "ORCID",
         "url": "https://orcid.org/0009-0009-9276-9549",
@@ -30,11 +26,6 @@
         "label": "GitHub",
         "url": "https://github.com/yingbofan",
         "sameAs": true
-      },
-      {
-        "label": "Semantic Scholar",
-        "url": "https://www.semanticscholar.org/search?q=Yingbo%20Fan%20Peking%20University&sort=relevance",
-        "note": "Author search"
       },
       {
         "label": "Email",

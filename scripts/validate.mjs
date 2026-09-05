@@ -28,9 +28,10 @@ for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const relative = path.relative(dist, file);
   if (!html.startsWith('<!doctype html>')) failures.push(`${relative}: missing HTML5 doctype`);
-  for (const required of ['<html lang="en">', '<main id="main">', '<title>']) {
+  for (const required of ['<main id="main">', '<title>']) {
     if (!html.includes(required)) failures.push(`${relative}: missing ${required}`);
   }
+  if (!/<html lang="(?:en|zh-CN)">/.test(html)) failures.push(`${relative}: missing supported language declaration`);
   if ((html.match(/<h1[ >]/g) || []).length !== 1) failures.push(`${relative}: expected exactly one h1`);
   if (html.includes('href="#"')) failures.push(`${relative}: contains placeholder href`);
 
@@ -48,7 +49,8 @@ for (const file of htmlFiles) {
   for (const match of html.matchAll(/<(?:img|script)[^>]+src="([^"]+)"/g)) {
     const url = match[1];
     if (/^https?:/.test(url)) continue;
-    const resolved = path.join(dist, url.replace(/^\//, ''));
+    const clean = url.split('#')[0].split('?')[0];
+    const resolved = path.join(dist, clean.replace(/^\//, ''));
     if (!fs.existsSync(resolved)) failures.push(`${relative}: missing src target ${url}`);
   }
 

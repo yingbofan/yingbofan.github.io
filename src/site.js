@@ -46,3 +46,34 @@ if (filterButtons.length && publicationRows.length) {
 
   updateFilter('all');
 }
+
+const bibtexButtons = [...document.querySelectorAll('[data-copy-bibtex]')];
+
+const copyText = async (value) => {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+  const textarea = document.createElement('textarea');
+  textarea.value = value;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  textarea.remove();
+};
+
+bibtexButtons.forEach((button) => {
+  button.addEventListener('click', async () => {
+    const template = document.getElementById(button.dataset.copyBibtex);
+    if (!template) return;
+    const value = template.content.textContent.trim();
+    await copyText(value);
+    button.textContent = button.dataset.copied;
+    window.setTimeout(() => {
+      button.textContent = button.dataset.label;
+    }, 1600);
+  });
+});

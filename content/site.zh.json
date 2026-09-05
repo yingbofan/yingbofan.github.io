@@ -9,6 +9,7 @@
     "email": "ybfan@pku.edu.cn",
     "tagline": "面向物理世界感知、预测与行动的多模态空间智能。",
     "mission": "我研究使具身系统能够感知复杂环境、预测空间动态并可靠行动的多模态空间智能，重点连接全景与三维感知、高效世界模型，以及面向智能矿山的真实场景部署。",
+    "collaboration": "欢迎围绕多模态空间智能、高效世界模型、具身智能与智能矿山开展科研合作。",
     "description": "樊迎博的个人学术主页，研究方向包括多模态空间智能、世界模型与智能矿山。",
     "publicationsDescription": "樊迎博在多模态空间智能、计算机视觉、高效模型与智能矿山方向的论文成果。",
     "projectsDescription": "樊迎博在空间智能、世界模型与智能矿山方向的科研项目。",
@@ -16,11 +17,6 @@
     "keywords": ["多模态空间智能", "世界模型", "智能矿山"],
     "cvUrl": "/assets/yingbo-fan-cv.pdf",
     "profiles": [
-      {
-        "label": "Google Scholar",
-        "url": "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yingbo+Fan+Peking+University",
-        "note": "作者检索"
-      },
       {
         "label": "ORCID",
         "url": "https://orcid.org/0009-0009-9276-9549",
@@ -30,11 +26,6 @@
         "label": "GitHub",
         "url": "https://github.com/yingbofan",
         "sameAs": true
-      },
-      {
-        "label": "Semantic Scholar",
-        "url": "https://www.semanticscholar.org/search?q=Yingbo%20Fan%20Peking%20University&sort=relevance",
-        "note": "作者检索"
       },
       {
         "label": "邮箱",

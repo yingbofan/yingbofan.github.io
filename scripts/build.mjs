@@ -24,6 +24,53 @@ const escapeHtml = (value = '') => String(value)
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#039;');
 
+const imageDimensions = {
+  '/assets/yingbo-fan-portrait.webp': [800, 1000],
+  '/assets/frontier-embodied-spatial.webp': [1600, 1000],
+  '/assets/frontier-world-models.webp': [1600, 1000],
+  '/assets/frontier-panoramic-geometry.webp': [1600, 1000],
+  '/assets/hfpq.webp': [1600, 1000],
+  '/assets/lmfd.webp': [1600, 1000],
+  '/assets/rectification.webp': [1600, 1000],
+  '/assets/dehazing.webp': [1600, 1000],
+  '/assets/cm-yolov8.webp': [1600, 1000],
+  '/assets/publication.svg': [800, 500],
+  '/assets/industrial-spatial.svg': [800, 500]
+};
+
+const imageAttrs = (src) => {
+  const dimensions = imageDimensions[src];
+  return dimensions ? ` width="${dimensions[0]}" height="${dimensions[1]}" decoding="async"` : ' decoding="async"';
+};
+
+const formatAuthors = (authors) => escapeHtml(authors)
+  .replaceAll('Yingbo Fan', '<strong class="self-author">Yingbo Fan</strong>')
+  .replaceAll('樊迎博', '<strong class="self-author">樊迎博</strong>');
+
+function bibtexFor(pub) {
+  if (!pub.doi) return '';
+  const authors = pub.authors.split(/[,，]/).map((name) => name.trim()).filter((name) => name && !/^et al\.?$/i.test(name)).join(' and ');
+  const firstAuthor = pub.authors.split(/[,，]/)[0].trim().split(/\s+/).at(-1).replace(/[^A-Za-z0-9]/g, '') || 'Fan';
+  const titleWord = pub.title.replace(/[^A-Za-z0-9 ]/g, ' ').split(/\s+/).find((word) => word && !['a', 'an', 'the'].includes(word.toLowerCase())) || 'Article';
+  const key = `${firstAuthor}${pub.year}${titleWord}`;
+  const [journal, details = ''] = pub.venue.split(/,(.*)/s);
+  const match = details.match(/\s*(\d+)(?:\((\d+)\))?\s*:\s*([^,]+)/);
+  const fields = [
+    `  title = {${pub.title}},`,
+    `  author = {${authors}},`,
+    `  journal = {${journal.trim()}},`,
+    `  year = {${pub.year}},`
+  ];
+  if (match) {
+    fields.push(`  volume = {${match[1]}},`);
+    if (match[2]) fields.push(`  number = {${match[2]}},`);
+    fields.push(`  pages = {${match[3].trim()}},`);
+  }
+  fields.push(`  doi = {${pub.doi}},`);
+  fields.push(`  url = {https://doi.org/${pub.doi}}`);
+  return `@article{${key},\n${fields.join('\n')}\n}`;
+}
+
 const baseUrl = 'https://yingbofan.github.io';
 
 const ui = {
@@ -45,7 +92,7 @@ const ui = {
     recognitionKicker: 'Academic recognition', selectedRecognition: 'Selected recognition',
     recentUpdates: 'Recent updates', latestNews: 'Latest news', newsIntro: 'Selected research, publication, project, and recognition milestones.',
     background: 'Background', educationExperience: 'Education and experience', fullCv: 'Full CV →',
-    firstAuthor: 'First author', coAuthor: 'Co-author', paper: 'Paper ↗',
+    firstAuthor: 'First author', coAuthor: 'Co-author', paper: 'Paper ↗', doiLink: 'DOI ↗', bibtex: 'BibTeX', copied: 'Copied ✓',
     publicationsTitle: 'Publications', publicationsPageIntro: 'A complete publication record assembled from the current academic materials. First-author work is marked explicitly.',
     filterPublications: 'Filter publications', all: 'All', selected: 'Selected', filterTemplate: '{count} publications shown',
     researchSystems: 'Research and systems', projectsTitle: 'Projects',
@@ -75,7 +122,7 @@ const ui = {
     recognitionKicker: '学术认可', selectedRecognition: '代表性荣誉',
     recentUpdates: '近期动态', latestNews: '最新进展', newsIntro: '记录具有明确学术证据的论文、项目与荣誉进展。',
     background: '学术背景', educationExperience: '教育与工作经历', fullCv: '完整简历 →',
-    firstAuthor: '第一作者', coAuthor: '共同作者', paper: '论文 ↗',
+    firstAuthor: '第一作者', coAuthor: '共同作者', paper: '论文 ↗', doiLink: 'DOI ↗', bibtex: 'BibTeX', copied: '已复制 ✓',
     publicationsTitle: '论文成果', publicationsPageIntro: '根据现有学术材料整理的完整论文列表，其中第一作者论文已作明确标注。',
     filterPublications: '筛选论文', all: '全部', selected: '代表作', filterTemplate: '当前显示 {count} 篇论文',
     researchSystems: '研究与系统', projectsTitle: '科研项目',
@@ -188,9 +235,9 @@ function layout({ title, description, active, pathname, content }) {
     <link rel="alternate" hreflang="zh-CN" href="${baseUrl}${chinesePathname}">
     <link rel="alternate" hreflang="x-default" href="${baseUrl}${englishPathname}">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/site.css?v=20260905-research-refresh">
+    <link rel="stylesheet" href="/assets/site.css?v=20260905-final-polish">
     <script type="application/ld+json">${JSON.stringify(jsonLd).replaceAll('<', '\\u003c')}</script>
-    <script src="/assets/site.js" defer></script>
+    <script src="/assets/site.js?v=20260905-final-polish" defer></script>
     <title>${escapeHtml(pageTitle)}</title>
   </head>
   <body class="lang-${locale}">
@@ -217,7 +264,7 @@ function featuredRow(item, index) {
     ? `<ul class="feature-points">${item.highlights.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul>`
     : '';
   return `<article class="feature-row${index % 2 ? ' feature-row-reverse' : ''}" id="${escapeHtml(item.slug)}">
-    <div class="feature-visual${item.imageFit === 'contain' ? ' feature-visual-contain' : ''}"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" loading="lazy"></div>
+    <div class="feature-visual${item.imageFit === 'contain' ? ' feature-visual-contain' : ''}"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" loading="lazy"${imageAttrs(item.image)}></div>
     <div class="feature-copy">
       <div class="feature-topline"><span class="research-label">${escapeHtml(item.category)}</span></div>
       <h3>${escapeHtml(item.title)}</h3>
@@ -233,7 +280,7 @@ function featuredRow(item, index) {
 function contributionCard(item) {
   const evidence = item.evidence.map((entry) => `<a class="text-link" href="${escapeHtml(entry.url)}" target="_blank" rel="noreferrer">${escapeHtml(entry.label)} ↗</a>`).join('');
   return `<article class="contribution-card">
-    <div class="contribution-visual"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt)}" loading="lazy"></div>
+    <div class="contribution-visual"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt)}" loading="lazy"${imageAttrs(item.image)}></div>
     <div class="contribution-copy">
       <div class="contribution-heading"><span>${escapeHtml(item.index)}</span><p>${escapeHtml(item.label)}</p></div>
       <h3>${escapeHtml(item.title)}</h3>
@@ -243,15 +290,26 @@ function contributionCard(item) {
   </article>`;
 }
 
+function publicationActions(pub) {
+  const bibtex = bibtexFor(pub);
+  const bibtexId = bibtex ? `bibtex-${pub.doi.replace(/[^A-Za-z0-9]/g, '-')}` : '';
+  return `<div class="link-row publication-links">
+    ${pub.url ? `<a class="text-link" href="${escapeHtml(pub.url)}" target="_blank" rel="noreferrer">${escapeHtml(t('paper'))}</a>` : ''}
+    ${pub.doi ? `<a class="text-link" href="https://doi.org/${escapeHtml(pub.doi)}" target="_blank" rel="noreferrer">${escapeHtml(t('doiLink'))}</a>` : ''}
+    ${bibtex ? `<button class="text-link bibtex-button" type="button" data-copy-bibtex="${bibtexId}" data-label="${escapeHtml(t('bibtex'))}" data-copied="${escapeHtml(t('copied'))}">${escapeHtml(t('bibtex'))}</button><template id="${bibtexId}">${escapeHtml(bibtex)}</template>` : ''}
+  </div>`;
+}
+
 function publicationCard(pub) {
+  const image = pub.image || '/assets/publication.svg';
   return `<article class="publication-card">
-    <div class="publication-thumb"><img src="${escapeHtml(pub.image || '/assets/publication.svg')}" alt="${escapeHtml(pub.imageAlt || '')}" loading="lazy"></div>
+    <div class="publication-thumb"><img src="${escapeHtml(image)}" alt="${escapeHtml(pub.imageAlt || '')}" loading="lazy"${imageAttrs(image)}></div>
     <div class="publication-body">
       <div class="publication-meta"><span>${escapeHtml(pub.venue)}</span>${pub.firstAuthor ? `<span>${escapeHtml(t('firstAuthor'))}</span>` : ''}</div>
       <h3>${escapeHtml(pub.title)}</h3>
-      <p class="authors">${escapeHtml(pub.authors)}</p>
+      <p class="authors">${formatAuthors(pub.authors)}</p>
       ${pub.summary ? `<p class="publication-summary">${escapeHtml(pub.summary)}</p>` : ''}
-      <div class="link-row">${pub.url ? `<a class="text-link" href="${escapeHtml(pub.url)}" target="_blank" rel="noreferrer">${escapeHtml(t('paper'))}</a>` : ''}${pub.doi ? `<span class="doi">DOI ${escapeHtml(pub.doi)}</span>` : ''}</div>
+      ${publicationActions(pub)}
     </div>
   </article>`;
 }
@@ -269,9 +327,10 @@ function homePage() {
         <p class="hero-mission">${escapeHtml(data.site.mission)}</p>
         <p class="research-keywords">${data.site.keywords.map(escapeHtml).join(' · ')}</p>
         <div class="profile-links">${profileLinks()}<a class="text-link" href="${route('/cv/')}">${escapeHtml(t('cv'))} →</a><a class="button-link" href="${escapeHtml(data.site.cvUrl)}" download>${escapeHtml(t('downloadCv'))} ↓</a></div>
+        <p class="collaboration-note">${escapeHtml(data.site.collaboration)}</p>
       </div>
       <div class="portrait-wrap">
-        <img src="/assets/yingbo-fan-portrait.webp" alt="${escapeHtml(t('portraitAlt'))}" fetchpriority="high" decoding="async">
+        <img src="/assets/yingbo-fan-portrait.webp" alt="${escapeHtml(t('portraitAlt'))}" fetchpriority="high"${imageAttrs('/assets/yingbo-fan-portrait.webp')}>
       </div>
     </section>
 
@@ -314,7 +373,7 @@ function homePage() {
 
     <section class="section applied-section">
       <div class="shell applied-grid">
-        <div class="applied-visual"><img src="/assets/industrial-spatial.svg" alt="${escapeHtml(t('industrialAlt'))}" loading="lazy"></div>
+        <div class="applied-visual"><img src="/assets/industrial-spatial.svg" alt="${escapeHtml(t('industrialAlt'))}" loading="lazy"${imageAttrs('/assets/industrial-spatial.svg')}></div>
         <div class="applied-copy">
           <p class="eyebrow">${escapeHtml(t('realWorldFrontier'))}</p>
           <h2>${escapeHtml(t('miningTitle'))}</h2>
@@ -376,8 +435,8 @@ function publicationsPage() {
       <div class="year-groups">
         ${years.map((year) => `<section class="year-group"><h2>${year}</h2><div>${data.publications.filter((pub) => pub.year === year).map((pub) => `<article class="publication-row" data-first-author="${pub.firstAuthor}" data-selected="${pub.selected}">
           <div class="publication-year-mark">${pub.firstAuthor ? escapeHtml(t('firstAuthor')) : escapeHtml(t('coAuthor'))}</div>
-          <div><h3>${escapeHtml(pub.title)}</h3><p class="authors">${escapeHtml(pub.authors)}</p><p class="venue">${escapeHtml(pub.venue)}</p><div class="tag-row">${(pub.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</div></div>
-          <div class="publication-actions">${pub.url ? `<a class="text-link" href="${escapeHtml(pub.url)}" target="_blank" rel="noreferrer">${escapeHtml(t('paper'))}</a>` : ''}${pub.doi ? `<p>DOI<br>${escapeHtml(pub.doi)}</p>` : ''}</div>
+          <div><h3>${escapeHtml(pub.title)}</h3><p class="authors">${formatAuthors(pub.authors)}</p><p class="venue">${escapeHtml(pub.venue)}</p><div class="tag-row">${(pub.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</div></div>
+          <div class="publication-actions">${publicationActions(pub)}</div>
         </article>`).join('')}</div></section>`).join('')}
       </div>
     </section>`;
@@ -405,7 +464,7 @@ function projectsPage() {
       </div>
     </section>
     <section class="page-section shell system-story">
-      <div><img src="/assets/industrial-spatial.svg" alt="${escapeHtml(t('industrialAlt'))}"></div>
+      <div><img src="/assets/industrial-spatial.svg" alt="${escapeHtml(t('industrialAlt'))}"${imageAttrs('/assets/industrial-spatial.svg')}></div>
       <div><p class="eyebrow">${escapeHtml(t('intelligenceWild'))}</p><h2>${escapeHtml(t('operationalTitle'))}</h2><p>${escapeHtml(t('operationalCopy'))}</p></div>
     </section>`;
   return layout({ title: t('projectsTitle'), description: data.site.projectsDescription, active: 'projects', pathname: route('/projects/'), content });

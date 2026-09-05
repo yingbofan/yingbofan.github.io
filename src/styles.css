@@ -303,6 +303,16 @@ p {
   font-size: 0.94rem;
 }
 
+.collaboration-note {
+  max-width: 680px;
+  margin: 1.45rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .portrait-wrap {
   align-self: center;
   margin: 0;
@@ -699,6 +709,11 @@ p {
   color: var(--muted);
 }
 
+.self-author {
+  color: var(--ink);
+  font-weight: 750;
+}
+
 .publication-summary {
   max-width: 760px;
 }
@@ -921,6 +936,18 @@ p {
   overflow-wrap: anywhere;
 }
 
+.publication-actions .publication-links {
+  justify-content: flex-end;
+}
+
+.bibtex-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -1130,6 +1157,10 @@ p {
   .publication-actions {
     grid-column: 2;
     text-align: left;
+  }
+
+  .publication-actions .publication-links {
+    justify-content: flex-start;
   }
 }
 
