@@ -24,24 +24,9 @@ const escapeHtml = (value = '') => String(value)
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#039;');
 
-const imageDimensions = {
-  '/assets/yingbo-fan-portrait.webp': [800, 1000],
-  '/assets/frontier-embodied-spatial.webp': [1600, 1000],
-  '/assets/frontier-world-models.webp': [1600, 1000],
-  '/assets/frontier-panoramic-geometry.webp': [1600, 1000],
-  '/assets/hfpq.webp': [1600, 1000],
-  '/assets/lmfd.webp': [1600, 1000],
-  '/assets/rectification.webp': [1600, 1000],
-  '/assets/dehazing.webp': [1600, 1000],
-  '/assets/cm-yolov8.webp': [1600, 1000],
-  '/assets/publication.svg': [800, 500],
-  '/assets/industrial-spatial.svg': [800, 500]
-};
-
-const imageAttrs = (src) => {
-  const dimensions = imageDimensions[src];
-  return dimensions ? ` width="${dimensions[0]}" height="${dimensions[1]}" decoding="async"` : ' decoding="async"';
-};
+// Keep research figures at their native aspect ratio. Explicit width/height
+// attributes previously conflicted with responsive card sizing in some browsers.
+const imageAttrs = () => ' decoding="async"';
 
 const formatAuthors = (authors) => escapeHtml(authors)
   .replaceAll('Yingbo Fan', '<strong class="self-author">Yingbo Fan</strong>')
@@ -235,9 +220,9 @@ function layout({ title, description, active, pathname, content }) {
     <link rel="alternate" hreflang="zh-CN" href="${baseUrl}${chinesePathname}">
     <link rel="alternate" hreflang="x-default" href="${baseUrl}${englishPathname}">
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/site.css?v=20260905-final-polish">
+    <link rel="stylesheet" href="/assets/site.css?v=20260906-native-ratio">
     <script type="application/ld+json">${JSON.stringify(jsonLd).replaceAll('<', '\\u003c')}</script>
-    <script src="/assets/site.js?v=20260905-final-polish" defer></script>
+    <script src="/assets/site.js?v=20260906-native-ratio" defer></script>
     <title>${escapeHtml(pageTitle)}</title>
   </head>
   <body class="lang-${locale}">

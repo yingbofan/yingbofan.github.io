@@ -37,6 +37,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -463,8 +464,8 @@ p {
 
 .feature-visual img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .feature-visual-contain img {
@@ -560,8 +561,8 @@ p {
 
 .contribution-visual img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .contribution-heading {
@@ -683,8 +684,8 @@ p {
 
 .publication-thumb img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .publication-meta {
